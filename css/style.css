@@ -1,0 +1,7091 @@
+/*
+=========================================================
+ PANEL DE CONTROL — FUENTE ÚNICA DE VALORES
+---------------------------------------------------------
+ Los valores editables de :root son los valores maestros.
+ NO se redefinen en @media para tablet/móvil.
+
+ Si cambias una variable del panel:
+ - computadora: cambia
+ - tablet: cambia
+ - móvil: cambia
+ - 380px: cambia
+ - 320px: cambia
+
+ Las diferencias naturales de tamaño de pantalla solo
+ aparecen cuando una variable usa unidades relativas como
+ vw, %, clamp(), svh, etc. Si quieres exactamente el
+ mismo valor físico en todos los dispositivos, usa px.
+=========================================================
+*/
+
+:root {
+    /* ===== COLORES BASE ===== */
+    --c-black: #090807;
+    --c-black-soft: #11100e;
+    --c-cream: #f7f2e9;
+    --c-cream-dark: #e9dfce;
+    --c-gold: #c9a45c;
+    --c-gold-light: #e5cf9c;
+    --c-gold-dark: #8c6d31;
+    --c-text-muted: rgba(247, 242, 233, .70);
+    --c-text-dark: #1b1814;
+
+    /* Alias de compatibilidad: evita que reglas antiguas pierdan sus colores */
+    --black: var(--c-black);
+    --black-soft: var(--c-black-soft);
+    --cream: var(--c-cream);
+    --cream-dark: var(--c-cream-dark);
+    --gold: var(--c-gold);
+    --gold-light: var(--c-gold-light);
+    --gold-dark: var(--c-gold-dark);
+    --text: var(--c-cream);
+    --text-muted: var(--c-text-muted);
+    --text-dark: var(--c-text-dark);
+
+ 
+    /* ===== APERTURA ===== */
+    --opening-padding: 30px 20px;
+    --opening-bg-x: 50%;
+    --opening-bg-y: 50%;
+    --opening-logo-width: clamp(120px,22vw,260px);
+    --opening-logo-max-width: 85%;
+    --opening-logo-max-height: 45svh;
+    --opening-logo-margin: 0 auto 5px;
+    --opening-logo-x: 0px;
+    --opening-logo-y: -20px;
+    --opening-title-margin: -20px 0 28px;
+    --opening-title-size: clamp(22px,5vw,34px);
+    --opening-title-weight: 500;
+    --opening-title-letter-spacing: 5px;
+    --opening-title-color: #f6ebd9;
+    --opening-title-font: 'Cormorant Garamond', serif;
+    --opening-button-margin-top: 0px;
+    --opening-button-padding: 17px 34px;
+    --opening-button-size: 10px;
+    --opening-button-weight: 400;
+    --opening-button-letter-spacing: 3px;
+    --opening-button-color: var(--c-cream);
+    --opening-button-bg: rgba(9,8,7,.85);
+    --opening-button-border: rgba(140,109,49,.75);
+
+ 
+   /* ===== HERO ===== */
+/* --- Sección completa --- */
+--hero-min-height: 100svh;
+--hero-bg-x: 50%;
+--hero-bg-y: 50%;
+--hero-frame-margin: 18px;
+/* --- Bloque completo --- */
+--hero-content-width: 100%;
+--hero-content-max-width: 900px;
+--hero-content-padding: 40px 25px;
+--hero-content-margin: 0 auto;
+--hero-content-x: 0px;
+--hero-content-y: 0px;
+/* --- Foto / inicial --- */
+--hero-photo-width: 380px;
+--hero-photo-max-width: 75vw;
+--hero-photo-margin: 0 auto 5px;
+--hero-photo-x: 0px;
+--hero-photo-y: 0px;
+--hero-photo-opacity: 0;
+/* --- Nombre Emma Vanessa --- */
+--hero-title-margin: 22px 0;
+--hero-title-size: clamp(80px,22vw,190px);
+--hero-title-weight: 300;
+--hero-title-line-height: .75;
+--hero-title-letter-spacing: 0px;
+--hero-title-color: var(--c-cream);
+--hero-title-font: 'Parisienne', cursive;
+--hero-title-image-width: 620px;
+--hero-title-image-max-width: 85vw;
+--hero-title-image-max-height: 25svh;
+--hero-title-x: 0px;
+--hero-title-y: clamp(70px,16.25svh,130px);
+/* --- MIS XV --- */
+--hero-eyebrow-size: 40px;
+--hero-eyebrow-letter-spacing: 3px;
+--hero-eyebrow-color: var(--c-cream);
+--hero-eyebrow-x: 0px;
+--hero-eyebrow-y: clamp(-200px,-20svh,-80px);
+/* --- Frase --- */
+--hero-text-max-width: 420px;
+--hero-text-margin: 25px auto;
+--hero-text-size: clamp(21px,5vw,28px);
+--hero-text-weight: 300;
+--hero-text-line-height: 1.3;
+--hero-text-letter-spacing: 0px;
+--hero-text-color: var(--c-cream);
+--hero-text-font: 'Cormorant Garamond', serif;
+--hero-text-x: 0px;
+--hero-text-y: clamp(90px,18.75svh,150px);
+/* --- Fecha --- */
+--hero-date-margin-top: 35px;
+--hero-date-size: 11px;
+--hero-date-letter-spacing: 7px;
+--hero-date-color: var(--c-gold-light);
+--hero-date-x: 0px;
+--hero-date-y: clamp(95px,20svh,160px);
+
+ 
+    /* ===== INTRO ===== */
+    --intro-bg-x: 50%;
+    --intro-bg-y: 50%;
+    --intro-ornament-width: 150px;
+    --intro-ornament-margin-bottom: 0px;
+    --intro-ornament-size: inherit;
+    --intro-ornament-x: 0px;
+    --intro-ornament-y: 0px;
+    --intro-title-size: clamp(45px,10vw,80px);
+    --intro-title-weight: 300;
+    --intro-title-font: 'Cormorant Garamond', serif;
+    --intro-title-color: #7f2855;
+    --intro-title-letter-spacing: 0px;
+    --intro-title-line-height: .95;
+    --intro-title-margin: 20px auto 30px;
+    --intro-title-x: 0px;
+    --intro-title-y: 0px;
+    --intro-p1-margin: 20px auto;
+    --intro-p1-size: 14px;
+    --intro-p1-weight: 300;
+    --intro-p1-line-height: 1.9;
+    --intro-p1-letter-spacing: 0px;
+    --intro-p1-color: #7f2855;
+    --intro-p1-font: 'Montserrat', sans-serif;
+    --intro-p1-x: 0px;
+    --intro-p1-y: 0px;
+    --intro-p2-margin: 20px auto;
+    --intro-p2-size: 14px;
+    --intro-p2-weight: 300;
+    --intro-p2-line-height: 1.9;
+    --intro-p2-letter-spacing: 0px;
+    --intro-p2-color: #7f2855;
+    --intro-p2-font: 'Montserrat', sans-serif;
+    --intro-p2-x: 0px;
+    --intro-p2-y: 0px;
+    --intro-label-size: 10px;
+    --intro-label-color: #7f2855;
+    --intro-label-font: 'Montserrat', sans-serif;
+    --intro-label-weight: 400;
+    --intro-label-letter-spacing: 4px;
+    --intro-label-margin: 0 0 0;
+    --intro-label-x: 0px;
+    --intro-label-y: 0px;
+ /* =========================================================
+   ANIMACIÓN INDIVIDUAL — INTRO
+   ========================================================= */
+--intro-anim-duration: 1.8s;
+--intro-anim-ease: cubic-bezier(.16, 1, .3, 1);
+--intro-label-delay: .20s;
+--intro-title-delay: .65s;
+--intro-ornament-delay: 1.10s;
+--intro-p1-delay: 1.45s;
+--intro-p2-delay: 1.80s;
+/* POSICIÓN INICIAL DE CADA ELEMENTO */
+--intro-label-from-x: 0px;
+--intro-label-from-y: -35px;
+--intro-title-from-x: 0px;
+--intro-title-from-y: 55px;
+--intro-ornament-from-x: 0px;
+--intro-ornament-from-y: 35px;
+--intro-p1-from-x: -50px;
+--intro-p1-from-y: 0px;
+--intro-p2-from-x: 50px;
+--intro-p2-from-y: 0px;
+
+ 
+    /* ===== CUENTA REGRESIVA ===== */
+    --count-section-padding: 200px 25px;
+    --count-bg-x: 50%;
+    --count-bg-y: 50%;
+    --count-title-margin-top: 30px;
+    --count-title-margin-bottom: 18px;
+    --count-title-size: clamp(32px,6vw,48px);
+    --count-title-weight: 400;
+    --count-title-letter-spacing: 0px;
+    --count-title-color: var(--c-gold-light);
+    --count-title-font: 'Parisienne', cursive;
+    --count-title-x: 0px;
+    --count-title-y: 0px;
+    --count-item-padding: 0 clamp(6px,2vw,16px);
+    --count-gap: 0px;
+    --count-number-size: clamp(32px,7vw,60px);
+    --count-number-weight: 500;
+    --count-number-line-height: 1;
+    --count-number-margin-bottom: 8px;
+    --count-number-color: var(--c-cream);
+    --count-number-font: 'El Messiri', sans-serif;
+    --count-number-x: 0px;
+    --count-number-y: 0px;
+    --count-label-size: clamp(9px,2.5vw,14px);
+    --count-label-weight: 400;
+    --count-label-letter-spacing: 2px;
+    --count-label-margin-top: 0px;
+    --count-label-color: var(--c-gold-light);
+    --count-label-font: 'El Messiri', sans-serif;
+    --count-label-x: 0px;
+    --count-label-y: 0px;
+    --count-divider-height: 35px;
+    --count-divider-color: var(--c-gold);
+    --count-divider-opacity: .45;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — COUNTDOWN
+   ========================================================= */
+--count-anim-duration: 1.8s;
+--count-anim-ease: cubic-bezier(.16, 1, .3, 1);
+--count-title-delay: .20s;
+--count-days-delay: .65s;
+--count-hours-delay: .95s;
+--count-minutes-delay: 1.25s;
+--count-seconds-delay: 1.55s;
+--count-title-from-x: 0px;
+--count-title-from-y: -35px;
+--count-days-from-x: -40px;
+--count-days-from-y: 30px;
+--count-hours-from-x: -20px;
+--count-hours-from-y: 30px;
+--count-minutes-from-x: 20px;
+--count-minutes-from-y: 30px;
+--count-seconds-from-x: 40px;
+--count-seconds-from-y: 30px;
+ 
+ 
+   /* =================== FECHA ================= */
+/* ===== FONDO ===== */
+--date-bg: none;
+/* ===== ETIQUETA ===== */
+/* RESERVA LA FECHA */
+--date-label-color: #7f2855;
+/* ===== NÚMERO ===== */
+/* 19 */
+--date-title-margin-top: 25px;
+--date-number-size: clamp(120px, 30vw, 220px);
+--date-number-weight: 300;
+--date-number-line-height: .7;
+--date-number-color: #7f2855;
+--date-number-font: 'Cormorant Garamond', serif;
+--date-number-x: 0px;
+--date-number-y: 0px;
+/* ===== MES ===== */
+/* DICIEMBRE */
+--date-month-margin-top: 25px;
+--date-month-size: 15px;
+--date-month-letter-spacing: 7px;
+--date-month-color: #7f2855;
+--date-month-font: 'Montserrat', sans-serif;
+/* ===== AÑO ===== */
+/* 2026 */
+--date-year-margin-top: 10px;
+--date-year-size: 32px;
+--date-year-color: #7f2855;
+--date-year-font: 'Cormorant Garamond', serif;
+/* ===== DETALLES ===== */
+--date-details-max-width: 500px;
+--date-details-margin: 60px auto 0;
+--date-details-gap: clamp(18px, 10vw, 60px);
+--date-detail-gap: 8px;
+--date-detail-min-width: min(100px, 28vw);
+/* ===== ETIQUETAS ===== */
+/* CEREMONIA / RECEPCIÓN */
+--date-detail-label-size: 9px;
+--date-detail-label-letter-spacing: 3px;
+--date-detail-label-color: #7f2855;
+--date-detail-label-font: 'Montserrat', sans-serif;
+/* ===== HORARIOS ===== */
+/* 11:00 AM / 6:00 PM */
+--date-detail-value-size: 25px;
+--date-detail-value-color: #7f2855;
+--date-detail-value-font: 'Cormorant Garamond', serif;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — RESERVA LA FECHA
+   ========================================================= */
+/* --- Animación general --- */
+--date-anim-duration: 1.8s;
+--date-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- Delays --- */
+--date-label-delay: .20s;
+--date-number-delay: .55s;
+--date-month-delay: .90s;
+--date-year-delay: 1.15s;
+--date-details-delay: 1.45s;
+/* =========================================================
+   POSICIÓN INICIAL DE CADA ELEMENTO
+   ========================================================= */
+/* RESERVA LA FECHA */
+--date-label-from-x: 0px;
+--date-label-from-y: -35px;
+/* 19 */
+--date-number-from-x: 0px;
+--date-number-from-y: 55px;
+/* DICIEMBRE */
+--date-month-from-x: -40px;
+--date-month-from-y: 0px;
+/* 2026 */
+--date-year-from-x: 40px;
+--date-year-from-y: 0px;
+/* CEREMONIA / RECEPCIÓN */
+--date-details-from-x: 0px;
+--date-details-from-y: 45px;
+
+
+ 
+/* =========================================================
+   FAMILIA — PANEL DE CONTROL
+========================================================= */
+/* ===== SECCIÓN / FONDO ===== */
+--family-bg-x: 50%;
+--family-bg-y: 50%;
+/* =========================================================
+   TARJETAS DE FAMILIA
+========================================================= */
+--family-card-max-width: 500px;
+--family-card-margin: 40px auto 80px;
+--family-card-padding: 35px 20px;
+--family-card-x: 0px;
+--family-card-y: 0px;
+/* =========================================================
+   NOMBRES DE LOS PADRES
+========================================================= */
+--family-parents-margin: 12px 0;
+--family-parents-size: 17px;
+--family-parents-weight: 300;
+--family-parents-line-height: 1.2;
+--family-parents-color: var(--c-gold);
+--family-parents-font: 'Cormorant Garamond', serif;
+--family-parents-letter-spacing: 0px;
+--family-parents-x: 0px;
+--family-parents-y: 0px;
+/* =========================================================
+   NOMBRES DE LOS PADRINOS
+======================================================== */
+--family-godparents-margin: 12px 0;
+--family-godparents-size: 20px;
+--family-godparents-weight: 300;
+--family-godparents-line-height: 1.2;
+--family-godparents-color: var(--c-gold);
+--family-godparents-font: 'Cormorant Garamond', serif;
+--family-godparents-letter-spacing: 0px;
+--family-godparents-x: 0px;
+--family-godparents-y: 0px;
+/* =========================================================
+   TÍTULO — MIS PADRES
+========================================================= */
+--family-heading-margin: 0 0 25px;
+--family-heading-size: 30px;
+--family-heading-weight: 300;
+--family-heading-line-height: 1.1;
+--family-heading-letter-spacing: 0px;
+--family-heading-color: var(--c-cream);
+--family-heading-font: 'Parisienne', cursive;
+--family-heading-x: 0px;
+--family-heading-y: 0px;
+/* =========================================================
+   SUBTÍTULO — MIS PADRINOS
+========================================================= */
+--family-subheading-margin: 45px 0 25px;
+--family-subheading-size: 30px;
+--family-subheading-weight: 300;
+--family-subheading-line-height: 1.1;
+--family-subheading-letter-spacing: 0px;
+--family-subheading-color: var(--c-cream);
+--family-subheading-font: 'Parisienne', cursive;
+--family-subheading-x: 0px;
+--family-subheading-y: 0px;
+/* ========================================================
+   ANIMACIÓN INDIVIDUAL — FAMILIA
+========================================================= */
+--family-anim-duration: 1.8s;
+--family-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* ===== RETRASOS ===== */
+--family-label-delay: .20s;
+--family-heading-delay: .50s;
+--family-parents-delay: .85s;
+--family-subheading-delay: 1.20s;
+--family-godparents-delay: 1.55s;
+/* ===== POSICIÓN INICIAL ===== */
+/* CON LA BENDICIÓN DE */
+--family-label-from-x: 0px;
+--family-label-from-y: -30px;
+/* MIS PADRES */
+--family-heading-from-x: 0px;
+--family-heading-from-y: 35px;
+/* NOMBRES DE PADRES */
+--family-parents-from-x: -45px;
+--family-parents-from-y: 0px;
+/* MIS PADRINOS */
+--family-subheading-from-x: 0px;
+--family-subheading-from-y: 35px;
+/* NOMBRES DE PADRINOS */
+--family-godparents-from-x: 45px;
+--family-godparents-from-y: 0px;
+ 
+
+
+  /* ===== EVENTOS — CEREMONIA Y RECEPCIÓN ===== */
+--event-min-height: 80svh;
+--event-frame-margin: 20px;
+/* =========================================================
+   FONDOS
+========================================================= */
+--ceremony-bg-x: 50%;
+--ceremony-bg-y: 50%;
+--reception-bg-x: 50%;
+--reception-bg-y: 50%;
+/* =========================================================
+   CONTENIDO
+========================================================= */
+--event-content-max-width: 800px;
+--event-content-padding: 30px 20px;
+/* =========================================================
+   PNG DEL EVENTO
+========================================================= */
+--event-image-width: 90px;
+--event-image-margin-bottom: 25px;
+--event-image-x: 0px;
+--event-image-y: 0px;
+/* =========================================================
+   TÍTULO DEL EVENTO
+========================================================= */
+--event-title-margin: 25px 0;
+--event-title-size: clamp(50px, 11vw, 100px);
+--event-title-weight: 300;
+--event-title-line-height: .9;
+--event-title-letter-spacing: 0px;
+--event-title-color: var(--c-cream);
+--event-title-font: 'Cormorant Garamond', serif;
+--event-title-x: 0px;
+--event-title-y: 0px;
+/* =========================================================
+   HORA DEL EVENTO
+========================================================= */
+--event-time-margin-bottom: 30px;
+--event-time-size: 30px;
+--event-time-weight: 300;
+--event-time-letter-spacing: 0px;
+--event-time-color: var(--c-gold-light);
+--event-time-font: 'Cormorant Garamond', serif;
+--event-time-x: 0px;
+--event-time-y: 0px;
+/* =========================================================
+   BOTÓN DORADO
+========================================================= */
+--gold-button-padding: 15px 25px;
+--gold-button-size: 9px;
+--gold-button-weight: 500;
+--gold-button-letter-spacing: 3px;
+--gold-button-color: var(--c-gold);
+--gold-button-border-color: var(--c-gold);
+--gold-button-bg: transparent;
+--gold-button-x: 0px;
+--gold-button-y: 0px;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — EVENTOS
+========================================================= */
+/* --- ANIMACIÓN DE LOS PNG --- */
+--ceremony-image-delay: .30s;
+--reception-image-delay: .30s;
+--ceremony-image-from-x: -45px;
+--ceremony-image-from-y: 0px;
+--reception-image-from-x: 45px;
+--reception-image-from-y: 0px;
+ --event-anim-duration: 1.6s;
+--event-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- CEREMONIA --- */
+--ceremony-label-delay: .15s;
+--ceremony-title-delay: .45s;
+--ceremony-time-delay: .80s;
+--ceremony-button-delay: 1.10s;
+/* --- RECEPCIÓN --- */
+--reception-label-delay: .15s;
+--reception-title-delay: .45s;
+--reception-time-delay: .80s;
+--reception-button-delay: 1.10s;
+/* --- Movimiento inicial CEREMONIA --- */
+--ceremony-label-from-x: 0px;
+--ceremony-label-from-y: -30px;
+--ceremony-title-from-x: 0px;
+--ceremony-title-from-y: 45px;
+--ceremony-time-from-x: -35px;
+--ceremony-time-from-y: 0px;
+--ceremony-button-from-x: 0px;
+--ceremony-button-from-y: 35px;
+/* --- Movimiento inicial RECEPCIÓN --- */
+--reception-label-from-x: 0px;
+--reception-label-from-y: -30px;
+--reception-title-from-x: 0px;
+--reception-title-from-y: 45px;
+--reception-time-from-x: 35px;
+--reception-time-from-y: 0px;
+--reception-button-from-x: 0px;
+--reception-button-from-y: 35px;
+
+ 
+    /* ===== GALERÍA ===== */
+/* --- Texto superior: MOMENTOS --- */
+--gallery-label-size: 10px;
+--gallery-label-weight: 400;
+--gallery-label-letter-spacing: 4px;
+--gallery-label-color: #7f2855;
+--gallery-label-font: 'Montserrat', sans-serif;
+--gallery-label-margin: 0 0 15px;
+--gallery-label-x: 0px;
+--gallery-label-y: 0px;
+/* --- Título: Un poco de mí --- */
+--gallery-title-size: 48px;
+--gallery-title-weight: 400;
+--gallery-title-line-height: 1;
+--gallery-title-color: #7f2855;
+--gallery-title-font: 'Cormorant Garamond', serif;
+--gallery-title-margin: 0;
+--gallery-title-x: 0px;
+--gallery-title-y: 0px;
+/* --- Galería --- */
+--gallery-max-width: 1000px;
+--gallery-margin: 50px auto 0;
+--gallery-gap: 8px;
+--gallery-item-min-height: clamp(150px,55vw,220px);
+/* --- Posición general de imágenes --- */
+--gallery-img-x: 50%;
+--gallery-img-y: 50%;
+/* --- Imagen 1 --- */
+--gallery-img-1-x: 50%;
+--gallery-img-1-y: 50%;
+/* --- Imagen 2 --- */
+--gallery-img-2-x: 50%;
+--gallery-img-2-y: 50%;
+/* --- Imagen 3 --- */
+--gallery-img-3-x: 50%;
+--gallery-img-3-y: 50%;
+/* --- Imagen 4 --- */
+--gallery-img-4-x: 50%;
+--gallery-img-4-y: 50%;
+/* --- Imagen 5 --- */
+--gallery-img-5-x: 50%;
+--gallery-img-5-y: 50%;
+/* --- Imagen 6 --- */
+--gallery-img-6-x: 50%;
+--gallery-img-6-y: 50%;
+/* --- Imagen 7 --- */
+--gallery-img-7-x: 50%;
+--gallery-img-7-y: 50%;
+/* --- Imagen 8 --- */
+--gallery-img-8-x: 50%;
+--gallery-img-8-y: 50%;
+/* --- Imagen 9 --- */
+--gallery-img-9-x: 50%;
+--gallery-img-9-y: 50%;
+/* --- Imagen 10 --- */
+--gallery-img-10-x: 50%;
+--gallery-img-10-y: 50%;
+/* --- Imagen 11 --- */
+--gallery-img-11-x: 50%;
+--gallery-img-11-y: 50%;
+/* --- Imagen 12 --- */
+--gallery-img-12-x: 50%;
+--gallery-img-12-y: 50%;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — GALERÍA
+========================================================= */
+--gallery-anim-duration: 1.4s;
+--gallery-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- TEXTOS --- */
+--gallery-label-delay: .15s;
+--gallery-title-delay: .40s;
+/* --- FOTOS --- */
+--gallery-img-1-delay: .60s;
+--gallery-img-2-delay: .72s;
+--gallery-img-3-delay: .84s;
+--gallery-img-4-delay: .96s;
+--gallery-img-5-delay: 1.08s;
+--gallery-img-6-delay: 1.20s;
+--gallery-img-7-delay: 1.32s;
+--gallery-img-8-delay: 1.44s;
+--gallery-img-9-delay: 1.56s;
+--gallery-img-10-delay: 1.68s;
+--gallery-img-11-delay: 1.80s;
+--gallery-img-12-delay: 1.92s;
+/* --- MOVIMIENTO INICIAL --- */
+--gallery-label-from-x: 0px;
+--gallery-label-from-y: -30px;
+--gallery-title-from-x: 0px;
+--gallery-title-from-y: 35px;
+/* --- MOVIMIENTO DE LAS FOTOS --- */
+--gallery-img-from-x: 0px;
+--gallery-img-from-y: 45px;
+
+
+ 
+    /* ===== VESTIMENTA ===== */
+/* --- Etiqueta: CÓDIGO DE VESTIMENTA --- */
+--dress-label-color: #7f2855;
+--dress-label-font: 'Montserrat', sans-serif;
+--dress-label-size: 10px;
+--dress-label-weight: 400;
+--dress-label-letter-spacing: 4px;
+--dress-label-margin: 0 0 20px;
+--dress-label-x: 0px;
+--dress-label-y: 0px;
+/* --- Icono: ♡ --- */
+--dress-icon-margin: 30px 0;
+--dress-icon-size: 70px;
+--dress-icon-color: #7f2855;
+--dress-icon-x: 0px;
+--dress-icon-y: 0px;
+/* --- Título: Formal --- */
+--dress-title-color: #7f2855;
+--dress-title-font: 'Cormorant Garamond', serif;
+--dress-title-size: clamp(45px,10vw,80px);
+--dress-title-weight: 300;
+--dress-title-letter-spacing: 0px;
+--dress-title-margin: 20px auto 30px;
+--dress-title-x: 0px;
+--dress-title-y: 0px;
+/* --- ornamen png --- */
+--dress-ornament-width: 120px;
+--dress-ornament-margin: 0 auto;
+--dress-ornament-x: 0px;
+--dress-ornament-y: 0px;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — VESTIMENTA
+========================================================= */
+--dress-anim-duration: 1.6s;
+--dress-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* =========================================================
+   RETRASOS
+========================================================= */
+/* CÓDIGO DE VESTIMENTA */
+--dress-label-delay: .15s;
+/* PNG */
+--dress-icon-delay: .45s;
+/* FORMAL */
+--dress-title-delay: .80s;
+/* TEXTO */
+--dress-ornament-delay: 1.15s;
+/* =========================================================
+   POSICIÓN INICIAL DE LA ANIMACIÓN
+========================================================= */
+/* CÓDIGO DE VESTIMENTA */
+--dress-label-from-x: 0px;
+--dress-label-from-y: -30px;
+/* PNG */
+--dress-icon-from-x: 0px;
+--dress-icon-from-y: 45px;
+/* FORMAL */
+--dress-title-from-x: 0px;
+--dress-title-from-y: 40px;
+/* TEXTO */
+--dress-ornament-from-x: 0px;
+--dress-ornament-from-y: 35px;
+ 
+ 
+   /* ===== SOBRES ===== */
+/* --- Etiqueta de sección --- */
+--envelope-label-color: #7f2855;
+--envelope-label-font: 'Montserrat', sans-serif;
+--envelope-label-size: 10px;
+--envelope-label-weight: 400;
+--envelope-label-letter-spacing: 4px;
+--envelope-label-margin: 0 0 20px;
+--envelope-label-x: 0px;
+--envelope-label-y: 0px;
+/* --- Icono --- */
+--envelope-icon-margin: 30px 0;
+--envelope-icon-size: 70px;
+--envelope-icon-color: var(--c-gold-light);
+--envelope-icon-x: 0px;
+--envelope-icon-y: 0px;
+/* --- Título --- */
+--envelope-title-color: #7f2855;
+--envelope-title-font: 'Cormorant Garamond', serif;
+--envelope-title-size: clamp(45px,10vw,80px);
+--envelope-title-weight: 300;
+--envelope-title-letter-spacing: 2px;
+--envelope-title-margin: 20px auto 30px;
+--envelope-title-x: 0px;
+--envelope-title-y: 0px;
+/* --- Texto --- */
+--envelope-text-color: #7f2855;
+--envelope-text-font: 'Montserrat', sans-serif;
+--envelope-text-size: 14px;
+--envelope-text-weight: 300;
+--envelope-text-line-height: 1.9;
+--envelope-text-letter-spacing: 0px;
+--envelope-text-margin: 20px auto;
+--envelope-text-x: 0px;
+--envelope-text-y: 0px;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — SOBRES
+========================================================= */
+--envelope-anim-duration: 1.6s;
+--envelope-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- RETRASOS --- */
+--envelope-label-delay: .15s;
+--envelope-icon-delay: .45s;
+--envelope-title-delay: .80s;
+--envelope-text-delay: 1.15s;
+/* --- POSICIÓN INICIAL --- */
+/* Etiqueta */
+--envelope-label-from-x: 0px;
+--envelope-label-from-y: -30px;
+/* PNG */
+--envelope-icon-from-x: 0px;
+--envelope-icon-from-y: 45px;
+/* Título */
+--envelope-title-from-x: 0px;
+--envelope-title-from-y: 40px;
+/* Texto */
+--envelope-text-from-x: 0px;
+--envelope-text-from-y: 35px;
+
+
+ 
+   /* ===== TIMELINE / PROGRAMA ===== */
+/* --- Etiqueta de sección: EL GRAN DÍA --- */
+--timeline-section-label-size: 10px;
+--timeline-section-label-weight: 400;
+--timeline-section-label-letter-spacing: 3px;
+--timeline-section-label-color: #7f2855;
+--timeline-section-label-font: 'Montserrat', sans-serif;
+--timeline-section-label-margin: 0 0 15px;
+--timeline-section-label-x: 0px;
+--timeline-section-label-y: 0px;
+/* --- Título de sección: Programa --- */
+--timeline-section-title-size: 48px;
+--timeline-section-title-weight: 400;
+--timeline-section-title-letter-spacing: 0px;
+--timeline-section-title-line-height: 1;
+--timeline-section-title-color: #7f2855;
+--timeline-section-title-font: 'Cormorant Garamond', serif;
+--timeline-section-title-margin: 0;
+--timeline-section-title-x: 0px;
+--timeline-section-title-y: 0px;
+/* --- Contenedor del Timeline --- */
+--timeline-max-width: 550px;
+--timeline-margin: 60px auto;
+/* --- Cada evento --- */
+--timeline-item-padding: clamp(24px,9vw,35px) clamp(14px,6vw,20px);
+--timeline-item-gap: 8px;
+--timeline-item-x: 0px;
+--timeline-item-y: 0px;
+/* --- Línea central --- */
+--timeline-line-width: 1px;
+--timeline-line-color: rgba(201,164,92,.5);
+--timeline-line-x: 50%;
+/* --- Punto de cada evento --- */
+--timeline-dot-size: 7px;
+--timeline-dot-color: var(--gold);
+--timeline-dot-x: 50%;
+--timeline-dot-y: 0px;
+/* --- Hora / etiqueta de cada evento --- */
+--timeline-label-size: 10px;
+--timeline-label-weight: 400;
+--timeline-label-letter-spacing: 3px;
+--timeline-label-color: #7f2855;
+--timeline-label-font: 'Montserrat', sans-serif;
+--timeline-label-margin: 0;
+--timeline-label-x: 0px;
+--timeline-label-y: 0px;
+/* --- Nombre del evento --- */
+--timeline-title-size: 30px;
+--timeline-title-weight: 400;
+--timeline-title-color: #7f2855;
+--timeline-title-font: 'Cormorant Garamond', serif;
+--timeline-title-letter-spacing: 0px;
+--timeline-title-line-height: 1;
+--timeline-title-margin: 0;
+--timeline-title-x: 0px;
+--timeline-title-y: 0px;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — TIMELINE / PROGRAMA
+========================================================= */
+--timeline-anim-duration: 1.4s;
+--timeline-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- TEXTOS DE LA SECCIÓN --- */
+--timeline-section-label-delay: .15s;
+--timeline-section-title-delay: .40s;
+/* --- EVENTOS --- */
+--timeline-item-1-delay: .70s;
+--timeline-item-2-delay: .95s;
+--timeline-item-3-delay: 1.20s;
+--timeline-item-4-delay: 1.45s;
+--timeline-item-5-delay: 1.70s;
+--timeline-item-6-delay: 1.95s;
+--timeline-item-7-delay: 2.20s;
+--timeline-item-8-delay: 2.45s;
+/* --- MOVIMIENTO INICIAL --- */
+/* Etiqueta */
+--timeline-section-label-from-x: 0px;
+--timeline-section-label-from-y: -30px;
+/* Título */
+--timeline-section-title-from-x: 0px;
+--timeline-section-title-from-y: 35px;
+/* Eventos */
+--timeline-item-from-x: 0px;
+--timeline-item-from-y: 45px;
+
+ 
+    /* ===== PASE ===== */
+    --pass-section-padding: clamp(70px,24vw,100px) clamp(16px,6vw,20px);
+    --pass-card-max-width: 450px;
+    --pass-card-padding: clamp(38px,12vw,60px) clamp(18px,7vw,30px);
+    --pass-card-x: 0px;
+    --pass-card-y: 0px;
+    --pass-title-margin: clamp(22px,7vw,30px) 0 5px;
+    --pass-title-size: 75px;
+    --pass-title-weight: 300;
+    --pass-title-color: #7f2855;
+    --pass-title-font: 'Cormorant Garamond', serif;
+    --pass-name-size: 35px;
+    --pass-name-weight: 400;
+    --pass-name-color: #7f2855;
+    --pass-name-font: 'Parisienne', cursive;
+    --pass-line-width: 80px;
+    --pass-line-margin: clamp(20px,7vw,30px) auto;
+    --pass-line-color: #7f2855;
+    --pass-text-margin: 5px;
+    --pass-text-size: 21px;
+    --pass-text-weight: 300;
+    --pass-text-letter-spacing: 2px;
+    --pass-text-color: #7f2855;
+    --pass-number-margin: clamp(7px,2.5vw,10px);
+    --pass-number-size: 60px;
+    --pass-number-weight: 400;
+    --pass-number-color: #7f2855;
+    --pass-number-font: 'Cormorant Garamond', serif;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — PASE DE INVITACIÓN
+========================================================= */
+--pass-anim-duration: 1.5s;
+--pass-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* --- RETRASOS --- */
+--pass-label-delay: .15s;
+--pass-title-delay: .40s;
+--pass-name-delay: .65s;
+--pass-line-delay: .90s;
+--pass-text-delay: 1.10s;
+--pass-number-delay: 1.30s;
+/* =========================================================
+   MOVIMIENTO INICIAL DE CADA ELEMENTO
+========================================================= */
+/* Etiqueta — PASE DE INVITACIÓN */
+--pass-label-from-x: 0px;
+--pass-label-from-y: -30px;
+/* Título — Mis XV */
+--pass-title-from-x: 0px;
+--pass-title-from-y: 35px;
+/* Nombre — Nohemi */
+--pass-name-from-x: 0px;
+--pass-name-from-y: 35px;
+/* Línea */
+--pass-line-from-x: 0px;
+--pass-line-from-y: 20px;
+/* Texto — Pase para */
+--pass-text-from-x: 0px;
+--pass-text-from-y: 25px;
+/* Número */
+--pass-number-from-x: 0px;
+--pass-number-from-y: 40px;
+ 
+ /* ===== RSVP ===== */
+--rsvp-bottom-padding: 130px;
+/* BOTÓN WHATSAPP */
+--whatsapp-margin-top: 25px;
+--whatsapp-padding: 17px 30px;
+--whatsapp-size: 10px;
+--whatsapp-weight: 500;
+--whatsapp-letter-spacing: 2px;
+--whatsapp-color: #fff;
+--whatsapp-bg: #878c76;
+--whatsapp-x: 0px;
+--whatsapp-y: 0px;
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — RSVP
+========================================================= */
+--rsvp-anim-duration: 1.5s;
+--rsvp-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* RETRASOS */
+--rsvp-label-delay: .15s;
+--rsvp-title-delay: .45s;
+--rsvp-text-delay: .75s;
+--rsvp-button-delay: 1.10s;
+/* MOVIMIENTO INICIAL — ETIQUETA */
+--rsvp-label-from-x: 0px;
+--rsvp-label-from-y: -30px;
+/* MOVIMIENTO INICIAL — TÍTULO */
+--rsvp-title-from-x: 0px;
+--rsvp-title-from-y: 35px;
+/* MOVIMIENTO INICIAL — TEXTO */
+--rsvp-text-from-x: 0px;
+--rsvp-text-from-y: 30px;
+/* MOVIMIENTO INICIAL — BOTÓN */
+--rsvp-button-from-x: 0px;
+--rsvp-button-from-y: 45px;
+/* =========================================================
+   FORMULARIO DE CONFIRMACIÓN
+========================================================= */
+/* ESPACIOS */
+--rsvp-form-space-top: 35px;
+--rsvp-form-gap: 28px;
+--rsvp-field-gap: 10px;
+/* TAMAÑOS */
+--rsvp-label-size: 18px;
+--rsvp-input-size: 16px;
+--rsvp-option-size: 16px;
+/* COLORES */
+--rsvp-label-color: #f7f2e9;
+--rsvp-input-bg: rgba(255, 255, 255, .95);
+--rsvp-input-color: #2b241c;
+--rsvp-placeholder-color: rgba(80, 70, 60, .45);
+--rsvp-option-color: #f7f2e9;
+--rsvp-input-border-color: rgba(201, 164, 92, .45);
+--rsvp-input-focus-color: #c9a45c;
+/* CAMPOS */
+--rsvp-input-padding-y: 14px;
+--rsvp-input-padding-x: 16px;
+--rsvp-input-radius: 4px;
+/* OPCIONES */
+--rsvp-option-gap: 10px;
+--rsvp-radio-size: 18px;
+/* ACOMPAÑANTES */
+--rsvp-companion-gap: 12px;
+/* BOTÓN */
+--rsvp-button-space-top: 10px;
+ /* =========================================================
+   ANIMACIÓN DEL FORMULARIO RSVP
+========================================================= */
+--rsvp-form-anim-distance: 30px;
+--rsvp-form-anim-duration: 0.9s;
+/* RETRASOS */
+--rsvp-form-delay: 0.45s;
+--rsvp-name-delay: 0.55s;
+--rsvp-response-delay: 0.75s;
+--rsvp-companions-delay: 1.00s;
+--rsvp-button-form-delay: 1.25s;
+
+ 
+    /* ===== MÚSICA ===== */
+    --music-right: 20px;
+    --music-bottom: 20px;
+    --music-size: 50px;
+    --music-border-color: var(--c-gold);
+    --music-color: var(--c-gold-light);
+    --music-bg: rgba(10,8,5,.82);
+    --music-x: 0px;
+    --music-y: 0px;
+
+ 
+/* =========================================================
+   HOTELES
+========================================================= */
+/* ESPACIO DEL BLOQUE */
+--hotels-space-top: 80px;
+--hotels-space-bottom: 100px;
+/* POSICIÓN DEL BLOQUE */
+--hotels-position-x: 0px;
+--hotels-position-y: 0px;
+/* ANCHO Y ESPACIO LATERAL */
+--hotels-width: 100%;
+--hotels-padding-x: 20px;
+/* =========================================================
+   FONDO DEL BLOQUE
+========================================================= */
+--hotels-background-image: url("../images/Fondo 1.jpg");
+--hotels-background-size: cover;
+--hotels-background-position: center center;
+--hotels-background-repeat: no-repeat;
+/* OSCURECIMIENTO DEL FONDO */
+--hotels-background-overlay: rgba(0, 0, 0, 0.0);
+/* =========================================================
+   TIPOGRAFÍA
+========================================================= */
+/* ETIQUETA */
+--hotels-label-size: 62px;
+--hotels-label-weight: 400;
+--hotels-label-letter-spacing: 2px;
+--hotels-label-line-height: 1.2;
+/* DESCRIPCIÓN */
+--hotels-description-size: 16px;
+--hotels-description-weight: 400;
+--hotels-description-line-height: 1.6;
+/* NOMBRE DE LOS HOTELES */
+--hotel-name-size: 50px;
+--hotel-name-weight: 400;
+--hotel-name-letter-spacing: 0px;
+--hotel-name-line-height: 1;
+--hotel-name-font: 'Cormorant Garamond', serif;
+/* =========================================================
+   COLORES
+========================================================= */
+--hotels-label-color: #c9a45c;
+--hotels-description-color:
+    rgba(247, 242, 233, .75);
+--hotel-name-color:
+    #f7f2e9;
+/* =========================================================
+   ESPACIOS INTERNOS
+========================================================= */
+--hotels-title-space-top: 20px;
+--hotels-description-space-top: 15px;
+--hotels-list-space-top: 45px;
+--hotels-gap: 40px;
+--hotel-button-space-top: 20px;
+/* =========================================================
+   BOTONES
+========================================================= */
+--hotel-button-padding-y: 12px;
+--hotel-button-padding-x: 25px;
+--hotel-button-font-size: 13px;
+--hotel-button-font-weight: 400;
+--hotel-button-letter-spacing: 1px;
+--hotel-button-color: #f7f2e9;
+--hotel-button-radius: 30px;
+/* =========================================================
+   ANIMACIÓN
+========================================================= */
+--hotels-animation-distance: 35px;
+--hotels-animation-duration: 0.8s;
+--hotels-title-delay: 0.15s;
+--hotels-description-delay: 0.30s;
+--hotel1-delay: 0.50s;
+--hotel1-button-delay: 0.70s;
+--hotel2-delay: 0.70s;
+--hotel2-button-delay: 0.90s;
+
+
+ 
+/* =========================================================
+   FOOTER — PANEL DE CONTROL
+========================================================= */
+/* =========================================================
+   FONDO
+========================================================= */
+/* Imagen de fondo */
+--footer-bg-image: url('../images/Fondo 1.jpg');
+/* Posición de la imagen de fondo */
+--footer-bg-x: 50%;
+--footer-bg-y: 50%;
+/* Tamaño de la imagen de fondo */
+--footer-bg-size: cover;
+/* Altura mínima del bloque */
+--footer-min-height: 100svh;
+/* =========================================================
+   ESPACIADO / TAMAÑO DEL BLOQUE
+========================================================= */
+--footer-padding-top: 70px;
+--footer-padding-right: 30px;
+--footer-padding-bottom: 70px;
+--footer-padding-left: 30px;
+/* =========================================================
+   ORNAMENTO PNG
+========================================================= */
+/* Tamaño */
+--footer-ornament-width: 150px;
+/* Posición */
+--footer-ornament-x: 0px;
+--footer-ornament-y: 330px;
+/* Espacio inferior */
+--footer-ornament-margin-bottom: 0px;
+/* =========================================================
+   TÍTULO — Emma Vanessa
+========================================================= */
+/* Tamaño */
+--footer-title-size: 80px;
+/* Grosor */
+--footer-title-weight: 300;
+/* Color */
+--footer-title-color: var(--c-cream);
+/* Fuente */
+--footer-title-font: 'Parisienne', cursive;
+/* Posición */
+--footer-title-x: 0px;
+--footer-title-y: 330px;
+/* Espaciado */
+--footer-title-margin-top: 0px;
+--footer-title-margin-bottom: 0px;
+/* =========================================================
+   TEXTO — MIS XV · 2027
+========================================================= */
+/* Tamaño */
+--footer-text-size: 10px;
+/* Grosor */
+--footer-text-weight: 300;
+/* Espaciado entre letras */
+--footer-text-letter-spacing: 3px;
+/* Color */
+--footer-text-color: var(--c-gold-light);
+/* Fuente */
+--footer-text-font: 'Montserrat', sans-serif;
+/* Espaciado */
+--footer-text-margin-top: 15px;
+--footer-text-margin-bottom: 15px;
+/* Posición */
+--footer-text-x: 0px;
+--footer-text-y: 330px;
+/* =========================================================
+   FIRMA — CON AMOR
+========================================================= */
+--footer-signature-size: 26px;
+--footer-signature-weight: 400;
+--footer-signature-letter-spacing: 0px;
+--footer-signature-color: rgba(247,242,233,.5);
+--footer-signature-font: 'Cormorant Garamond', serif;
+/* Posición */
+--footer-signature-x: 0px;
+--footer-signature-y: 0px;
+/* Espacio superior */
+--footer-signature-margin-top: 0px;
+/* =========================================================
+   ANIMACIÓN — FOOTER
+========================================================= */
+--footer-anim-duration: 1.6s;
+--footer-anim-ease: cubic-bezier(.16, 1, .3, 1);
+/* Retrasos */
+--footer-ornament-delay: .15s;
+--footer-title-delay: .50s;
+--footer-text-delay: .85s;
+--footer-signature-delay: 1.15s;
+/* Movimiento inicial — PNG */
+--footer-ornament-from-x: 0px;
+--footer-ornament-from-y: 45px;
+/* Movimiento inicial — TÍTULO */
+--footer-title-from-x: 0px;
+--footer-title-from-y: 40px;
+/* Movimiento inicial — TEXTO */
+--footer-text-from-x: 0px;
+--footer-text-from-y: 30px;
+/* Movimiento inicial — FIRMA */
+--footer-signature-from-x: 0px;
+--footer-signature-from-y: 25px;
+ 
+    /* ===== AJUSTES GENERALES / COMPATIBILIDAD ===== */
+    --section-padding: 110px 25px;
+    --section-label-size: 10px;
+    --section-label-letter-spacing: 4px;
+    --section-label-weight: 400;
+    --section-label-color: var(--c-gold-light);
+    --section-title-max-width: 700px;
+    --section-title-margin: 20px auto 30px;
+    --section-title-size: clamp(45px,10vw,80px);
+    --section-title-weight: 300;
+    --section-title-line-height: .95;
+    --section-title-letter-spacing: 0px;
+    --section-title-color: var(--c-cream);
+    --section-title-font: 'Cormorant Garamond', serif;
+    --section-text-max-width: 600px;
+    --section-text-margin: 20px auto;
+    --section-text-size: 14px;
+    --section-text-weight: 300;
+    --section-text-line-height: 1.9;
+    --section-text-letter-spacing: 0px;
+    --section-text-color: var(--c-text-muted);
+    --section-text-font: 'Montserrat', sans-serif;
+
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+
+body {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: var(--black);
+
+    color: var(--text);
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 300;
+
+    overflow-x: hidden;
+}
+
+
+body:not(.page-open) {
+
+    overflow: hidden;
+}
+
+
+body.page-open {
+
+    overflow-x: hidden;
+
+    overflow-y: auto;
+}
+
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button {
+
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   UTILIDADES
+========================================================= */
+
+.hidden {
+
+    display: none !important;
+}
+
+
+/* =========================================================
+   PANTALLA DE APERTURA
+========================================================= */
+
+.opening {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    width: 100%;
+
+    height: 100vh;
+
+    height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #ffffff;
+
+    background-image:
+        linear-gradient(
+            rgba(40, 15, 18, 0.18),
+            rgba(40, 15, 18, 0.18)
+        ),
+        url('../images/uva cuadro.jpg');
+
+    background-position: var(--opening-bg-x) var(--opening-bg-y);
+background-size: cover;
+
+    background-repeat: no-repeat;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    overflow: hidden;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+/* =========================================================
+   CONTENIDO DE LA APERTURA
+========================================================= */
+
+.opening-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(100%, 700px);
+
+    padding: var(--opening-padding);
+display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    animation:
+        openingContentIn 1.2s ease both;
+}
+
+
+/* =========================================================
+   LOGO PNG
+========================================================= */
+
+.opening-logo {
+
+    display: block;
+
+    width: min(var(--opening-logo-width), calc(100vw - 40px));
+
+    max-width: var(--opening-logo-max-width);
+
+    max-height: var(--opening-logo-max-height);
+height: auto;
+
+    object-fit: contain;
+
+    margin: var(--opening-logo-margin);
+filter:
+        drop-shadow(
+            0 4px 8px
+            rgba(0, 0, 0, .15)
+        );
+}
+
+
+/* =========================================================
+   MIS XV
+========================================================= */
+
+.opening-title {
+    margin: var(--opening-title-margin);
+
+    font-family: var(--opening-title-font);
+
+    font-size: var(--opening-title-size);
+
+    font-weight: var(--opening-title-weight);
+line-height: 1;
+
+    letter-spacing: var(--opening-title-letter-spacing);
+
+    color: var(--opening-title-color);
+text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BOTÓN ABRIR
+========================================================= */
+
+.open-button {
+
+    position: relative;
+
+    margin-top: var(--opening-button-margin-top);
+
+    padding: var(--opening-button-padding);
+
+    border: 1px solid var(--opening-button-border);
+background: var(--opening-button-bg);
+color: var(--opening-button-color);
+font-family:
+        'Montserrat',
+        sans-serif;
+
+    font-size: var(--opening-button-size);
+
+    font-weight: var(--opening-button-weight);
+
+    letter-spacing: var(--opening-button-letter-spacing);
+text-transform: uppercase;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        border-color .4s ease,
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+
+.open-button:hover {
+
+    background:
+        var(--gold);
+
+    border-color:
+        var(--gold);
+
+    color:
+        var(--black);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 35px
+        rgba(
+            201,
+            164,
+            92,
+            .18
+        );
+}
+
+
+.open-button:active {
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   ANIMACIÓN PORTADA
+========================================================= */
+
+@keyframes openingContentIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ESTADO CERRADO
+========================================================= */
+
+.opening.opening-hidden {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   ANIMACIÓN FOTO HERO
+========================================================= */
+
+@keyframes heroPhotoAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(80px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN TEXTO MIS XV
+========================================================= */
+
+@keyframes heroTextAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMACIÓN DEL NOMBRE
+========================================================= */
+
+@keyframes heroNameAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+#invitation.is-visible .hero h1 {
+
+    animation:
+        heroNameAppear 1.5s ease-out forwards;
+
+    animation-delay: 2.2s;
+
+    opacity: 0;
+}
+
+
+/* =========================================================
+   INVITACIÓN OCULTA
+========================================================= */
+
+#invitation {
+
+    width: 100%;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+#invitation.is-visible {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+========================================================= */
+
+.invitation {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    background: var(--black);
+}
+
+
+.invitation.is-visible {
+
+    animation:
+        invitationIn 1s ease both;
+}
+
+
+@keyframes invitationIn {
+
+    from {
+
+        opacity: 0;
+    }
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height:
+        var(--hero-min-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(10, 8, 5, 0),
+            rgba(10, 8, 5, 0)
+        ),
+        url('../images/Fondo 1.jpg')
+        var(--hero-bg-x)
+        var(--hero-bg-y) /
+        cover no-repeat;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   MARCO DEL HERO
+========================================================= */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    margin:
+        var(--hero-frame-margin);
+
+    border:
+        1px solid
+        rgba(
+            229,
+            207,
+            156,
+            .18
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0) 100%
+        );
+}
+
+
+/* =========================================================
+   HERO — BLOQUE COMPLETO
+========================================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width:
+        var(--hero-content-width);
+
+    max-width:
+        var(--hero-content-max-width);
+
+    margin:
+        var(--hero-content-margin);
+
+    padding:
+        var(--hero-content-padding);
+
+    translate:
+        var(--hero-content-x)
+        var(--hero-content-y);
+}
+
+
+/* =========================================================
+   FOTO / INICIAL
+========================================================= */
+
+.hero-photo {
+
+    display: block;
+
+    width:
+        min(
+            var(--hero-photo-width),
+            calc(100vw - 50px)
+        );
+
+    max-width:
+        var(--hero-photo-max-width);
+
+    height: auto;
+
+    margin:
+        var(--hero-photo-margin);
+
+    position: relative;
+
+    z-index: 2;
+
+    translate:
+        var(--hero-photo-x)
+        var(--hero-photo-y);
+
+    filter:
+        drop-shadow(
+            0 10px 20px
+            rgba(0, 0, 0, .35)
+        );
+
+    opacity:
+        var(--hero-photo-opacity);
+}
+
+
+/* =========================================================
+   ANIMACIÓN FOTO
+========================================================= */
+
+#invitation.is-visible .hero-photo {
+
+    animation:
+        heroPhotoAppear
+        2.5s
+        ease-out
+        forwards;
+}
+
+
+/* =========================================================
+   HERO — "MIS XV"
+========================================================= */
+
+.hero .eyebrow {
+
+    display: block;
+
+    margin:
+        0 0 10px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size:
+        var(--hero-eyebrow-size);
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+    letter-spacing:
+        var(--hero-eyebrow-letter-spacing);
+
+    color:
+        var(--hero-eyebrow-color);
+
+    text-transform:
+        uppercase;
+
+    translate:
+        var(--hero-eyebrow-x)
+        var(--hero-eyebrow-y);
+}
+
+
+/* =========================================================
+   ANIMACIÓN — MIS XV
+========================================================= */
+
+#invitation.is-visible .hero .eyebrow {
+
+    animation:
+        heroTextAppear
+        1.5s
+        ease-out
+        forwards;
+
+    animation-delay:
+        2s;
+
+    opacity:
+        0;
+}
+
+
+/* =========================================================
+   NOMBRE — Emma Vanessa
+========================================================= */
+
+.hero h1 {
+
+    margin:
+        var(--hero-title-margin);
+
+    font-family:
+        var(--hero-title-font);
+
+    font-size:
+        var(--hero-title-size);
+
+    font-weight:
+        var(--hero-title-weight);
+
+    line-height:
+        var(--hero-title-line-height);
+
+    letter-spacing:
+        var(--hero-title-letter-spacing);
+
+    color:
+        var(--hero-title-color);
+
+    translate:
+        var(--hero-title-x)
+        var(--hero-title-y);
+}
+
+.hero-title-image {
+    display: block;
+    width: var(--hero-title-image-width);
+    max-width: min(var(--hero-title-image-max-width), calc(100vw - 40px));
+    max-height: var(--hero-title-image-max-height);
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   ANIMACIÓN — Emma Vanessa
+========================================================= */
+
+#invitation.is-visible .hero h1 {
+
+    animation:
+        heroTextAppear
+        1.8s
+        ease-out
+        forwards;
+
+    animation-delay:
+        1.4s;
+
+    opacity:
+        0;
+}
+
+
+/* =========================================================
+   ANIMACIÓN — FRASE
+========================================================= */
+
+@keyframes heroPhraseAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+#invitation.is-visible .hero p {
+
+    animation:
+        heroPhraseAppear
+        1.5s
+        ease-out
+        forwards;
+
+    animation-delay:
+        2.7s;
+
+    opacity:
+        0;
+}
+
+
+/* =========================================================
+   FRASE DEL HERO
+========================================================= */
+
+.hero p {
+
+    width:
+        100%;
+
+    max-width:
+        var(--hero-text-max-width);
+
+    margin:
+        var(--hero-text-margin);
+
+    font-family:
+        var(--hero-text-font);
+
+    font-size:
+        var(--hero-text-size);
+
+    font-weight:
+        var(--hero-text-weight);
+
+    font-style:
+        italic;
+
+    line-height:
+        var(--hero-text-line-height);
+
+    letter-spacing:
+        var(--hero-text-letter-spacing);
+
+    color:
+        var(--hero-text-color);
+
+    translate:
+        var(--hero-text-x)
+        var(--hero-text-y);
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.hero-date {
+
+    display: block;
+
+    margin-top:
+        var(--hero-date-margin-top);
+
+    font-family:
+        var(--hero-text-font);
+
+    font-size:
+        var(--hero-date-size);
+
+    letter-spacing:
+        var(--hero-date-letter-spacing);
+
+    color:
+        var(--hero-date-color);
+
+    translate:
+        var(--hero-date-x)
+        var(--hero-date-y);
+}
+
+
+/* =========================================================
+   ANIMACIÓN — FECHA
+========================================================= */
+
+@keyframes heroDateAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+#invitation.is-visible .hero .hero-date {
+
+    animation:
+        heroDateAppear
+        1.5s
+        ease-out
+        forwards;
+
+    animation-delay:
+        2.8s;
+
+    opacity:
+        0;
+}
+/* =========================================================
+   SECCIONES GENERALES
+========================================================= */
+
+.section {
+
+    width: 100%;
+
+    padding: var(--section-padding);
+text-align: center;
+
+    background: var(--black);
+}
+
+
+.section h2 {
+
+    width: 100%;
+
+    max-width: var(--section-title-max-width);
+
+    margin: var(--section-title-margin);
+
+    font-family: var(--section-title-font);
+
+    font-size: var(--section-title-size);
+
+    font-weight: var(--section-title-weight);
+
+    line-height: var(--section-title-line-height);
+}
+
+
+.section p {
+
+    width: 100%;
+
+    max-width: var(--section-text-max-width);
+
+    margin: var(--section-text-margin);
+
+    color: var(--section-text-color);
+font-size: var(--section-text-size);
+
+    line-height: var(--section-text-line-height);
+}
+
+
+/* =========================================================
+   INTRODUCCIÓN
+========================================================= */
+
+.intro {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url("../images/Fondo 5.jpg")
+        center center / cover no-repeat;
+}
+
+.intro .ornament img {
+
+    display: block;
+
+    width: var(--intro-ornament-width);
+
+    height: auto;
+
+    margin: 0 auto;
+
+    transform:
+        translateY(var(--intro-ornament-position-y));
+}
+
+/* =========================================================
+   CUENTA REGRESIVA
+========================================================= */
+
+.countdown-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url("../images/Fondo 1.jpg")
+        var(--count-bg-x) var(--count-bg-y) / cover no-repeat;
+
+    padding: var(--count-section-padding);
+}
+
+
+.countdown-content {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.countdown-title {
+    font-family: var(--count-title-font);
+
+    font-size: var(--count-title-size);
+
+    font-weight: var(--count-title-weight);
+
+    letter-spacing: var(--count-title-letter-spacing);
+
+    color: var(--count-title-color);
+
+    margin-top: var(--count-title-margin-top);
+    margin-bottom: var(--count-title-margin-bottom);
+
+    line-height: 1;
+
+    translate: var(--count-title-x) var(--count-title-y);
+}
+
+
+.countdown {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    gap: var(--count-gap);
+}
+
+
+.count-item {
+
+    flex: 1;
+
+    text-align: center;
+
+    padding: var(--count-item-padding);
+}
+
+
+.count-item span {
+
+    display: block;
+
+    font-family: var(--count-number-font);
+
+    font-size: var(--count-number-size);
+
+    font-weight: var(--count-number-weight);
+
+    color: var(--count-number-color);
+line-height: var(--count-number-line-height);
+
+    margin-bottom: var(--count-number-margin-bottom);
+
+    translate: var(--count-number-x) var(--count-number-y);
+}
+
+
+.count-item small {
+
+    display: block;
+
+    font-family: var(--count-label-font);
+
+    font-size: var(--count-label-size);
+
+    font-weight: var(--count-label-weight);
+
+    letter-spacing: var(--count-label-letter-spacing);
+
+    color: var(--count-label-color);
+
+    margin-top: var(--count-label-margin-top);
+
+    translate: var(--count-label-x) var(--count-label-y);
+
+    text-transform: none;
+}
+
+
+.count-divider {
+
+    width: 1px;
+
+    height: var(--count-divider-height);
+flex-shrink: 0;
+
+    background: var(--count-divider-color);
+
+    opacity: var(--count-divider-opacity);
+}
+
+
+/* =========================================================
+   FECHA
+========================================================= */
+
+.date-section {
+
+    width: 100%;
+
+    padding: var(--section-padding);
+
+    background:
+        url("../images/Fondo 6.jpg")
+        center center /
+        cover
+        no-repeat;
+}
+
+
+/* =========================================================
+   ETIQUETA
+   RESERVA LA FECHA
+========================================================= */
+
+.date-section .section-label {
+
+    color:
+        var(--date-label-color);
+}
+
+
+/* =========================================================
+   NÚMERO
+   19
+========================================================= */
+
+.date-section h2 {
+
+    margin-top:
+        var(--date-title-margin-top);
+
+    font-size:
+        min(
+            var(--date-number-size),
+            30vw
+        );
+
+    font-weight:
+        var(--date-number-weight);
+
+    line-height:
+        var(--date-number-line-height);
+
+    color:
+        var(--date-number-color);
+
+    font-family:
+        var(--date-number-font);
+
+    translate:
+        var(--date-number-x)
+        var(--date-number-y);
+}
+
+
+/* =========================================================
+   MES
+   DICIEMBRE
+========================================================= */
+
+.month {
+
+    margin-top:
+        var(--date-month-margin-top);
+
+    font-size:
+        var(--date-month-size);
+
+    letter-spacing:
+        var(--date-month-letter-spacing);
+
+    color:
+        var(--date-month-color);
+
+    font-family:
+        var(--date-month-font);
+}
+
+
+/* =========================================================
+   AÑO
+   2027
+========================================================= */
+
+.year {
+
+    margin-top:
+        var(--date-year-margin-top);
+
+    font-size:
+        min(
+            var(--date-year-size),
+            12vw
+        );
+
+    color:
+        var(--date-year-color);
+
+    font-family:
+        var(--date-year-font);
+}
+
+
+/* =========================================================
+   CONTENEDOR DE DETALLES
+========================================================= */
+
+.date-details {
+
+    width: 100%;
+
+    max-width:
+        var(--date-details-max-width);
+
+    margin:
+        var(--date-details-margin);
+
+    display: flex;
+
+    justify-content: center;
+
+    gap:
+        var(--date-details-gap);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CADA DETALLE
+========================================================= */
+
+.date-details div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        var(--date-detail-gap);
+
+    min-width:
+        var(--date-detail-min-width);
+
+    max-width: 100%;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   ETIQUETA
+   CEREMONIA / RECEPCIÓN
+========================================================= */
+
+.date-details strong {
+
+    font-size:
+        var(--date-detail-label-size);
+
+    letter-spacing:
+        var(--date-detail-label-letter-spacing);
+
+    color:
+        var(--date-detail-label-color);
+
+    font-family:
+        var(--date-detail-label-font);
+}
+
+
+/* =========================================================
+   HORARIO
+   07:00 PM / 08:00 PM
+========================================================= */
+
+.date-details span {
+
+    font-size:
+        min(
+            var(--date-detail-value-size),
+            8vw
+        );
+
+    color:
+        var(--date-detail-value-color);
+
+    font-family:
+        var(--date-detail-value-font);
+}
+/* =========================================================
+   ANIMACIÓN — RESERVA LA FECHA
+========================================================= */
+
+/* ---------------------------------------------------------
+   ESTADO INICIAL
+--------------------------------------------------------- */
+
+.date-section .section-label,
+.date-section h2,
+.date-section .month,
+.date-section .year,
+.date-section .date-details {
+    opacity: 0;
+
+    transition:
+        opacity var(--date-anim-duration) var(--date-anim-ease),
+        transform var(--date-anim-duration) var(--date-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ---------------------------------------------------------
+   POSICIONES INICIALES
+--------------------------------------------------------- */
+
+/* RESERVA LA FECHA */
+.date-section .section-label {
+    transform:
+        translate(
+            var(--date-label-from-x),
+            var(--date-label-from-y)
+        );
+}
+
+/* 19 */
+.date-section h2 {
+    transform:
+        translate(
+            var(--date-number-from-x),
+            var(--date-number-from-y)
+        );
+}
+
+/* DICIEMBRE */
+.date-section .month {
+    transform:
+        translate(
+            var(--date-month-from-x),
+            var(--date-month-from-y)
+        );
+}
+
+/* 2026 */
+.date-section .year {
+    transform:
+        translate(
+            var(--date-year-from-x),
+            var(--date-year-from-y)
+        );
+}
+
+/* CEREMONIA / RECEPCIÓN */
+.date-section .date-details {
+    transform:
+        translate(
+            var(--date-details-from-x),
+            var(--date-details-from-y)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ESTADO VISIBLE
+--------------------------------------------------------- */
+
+.date-section.animate-content .section-label,
+.date-section.animate-content h2,
+.date-section.animate-content .month,
+.date-section.animate-content .year,
+.date-section.animate-content .date-details {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   DELAYS INDIVIDUALES
+--------------------------------------------------------- */
+
+.date-section.animate-content .section-label {
+    transition-delay:
+        var(--date-label-delay);
+}
+
+.date-section.animate-content h2 {
+    transition-delay:
+        var(--date-number-delay);
+}
+
+.date-section.animate-content .month {
+    transition-delay:
+        var(--date-month-delay);
+}
+
+.date-section.animate-content .year {
+    transition-delay:
+        var(--date-year-delay);
+}
+
+.date-section.animate-content .date-details {
+    transition-delay:
+        var(--date-details-delay);
+}
+
+/* =========================================================
+   FAMILIA
+========================================================= */
+
+.family-section {
+
+    background:
+        linear-gradient(
+            rgba(10, 8, 5, 0),
+            rgba(10, 8, 5, 0)
+        ),
+        url('../images/Fondo 1.jpg')
+        var(--family-bg-x)
+        var(--family-bg-y) /
+        cover no-repeat;
+
+}
+
+
+/* =========================================================
+   TARJETA FAMILIA
+========================================================= */
+
+.family-card {
+
+    width: 100%;
+
+    max-width:
+        var(--family-card-max-width);
+
+    margin:
+        var(--family-card-margin);
+
+    padding:
+        var(--family-card-padding);
+
+    translate:
+        var(--family-card-x)
+        var(--family-card-y);
+
+    border-top:
+        1px solid
+        rgba(
+            201,
+            164,
+            92,
+            .4
+        );
+
+    border-bottom:
+        1px solid
+        rgba(
+            201,
+            164,
+            92,
+            .4
+        );
+}
+
+
+/* =========================================================
+   NOMBRES DE LOS PADRES
+========================================================= */
+
+.family-card p[data-father],
+.family-card p[data-mother] {
+
+    margin:
+        var(--family-parents-margin);
+
+    font-family:
+        var(--family-parents-font);
+
+    font-size:
+        var(--family-parents-size);
+
+    font-weight:
+        var(--family-parents-weight);
+
+    line-height:
+        var(--family-parents-line-height);
+
+    letter-spacing:
+        var(--family-parents-letter-spacing);
+
+    color:
+        var(--family-parents-color);
+
+    translate:
+        var(--family-parents-x)
+        var(--family-parents-y);
+
+    overflow-wrap:
+        break-word;
+}
+
+
+/* =========================================================
+   NOMBRES DE LOS PADRINOS
+========================================================= */
+
+.family-card p[data-godfather],
+.family-card p[data-godmother] {
+
+    margin:
+        var(--family-godparents-margin);
+
+    font-family:
+        var(--family-godparents-font);
+
+    font-size:
+        var(--family-godparents-size);
+
+    font-weight:
+        var(--family-godparents-weight);
+
+    line-height:
+        var(--family-godparents-line-height);
+
+    letter-spacing:
+        var(--family-godparents-letter-spacing);
+
+    color:
+        var(--family-godparents-color);
+
+    translate:
+        var(--family-godparents-x)
+        var(--family-godparents-y);
+
+    overflow-wrap:
+        break-word;
+}
+
+
+/* =========================================================
+   MIS PADRES
+========================================================= */
+
+.family-section > h2:not(.sub-heading) {
+
+    margin:
+        var(--family-heading-margin);
+
+    font-family:
+        var(--family-heading-font);
+
+    font-size:
+        var(--family-heading-size);
+
+    font-weight:
+        var(--family-heading-weight);
+
+    line-height:
+        var(--family-heading-line-height);
+
+    letter-spacing:
+        var(--family-heading-letter-spacing);
+
+    color:
+        var(--family-heading-color);
+
+    translate:
+        var(--family-heading-x)
+        var(--family-heading-y);
+}
+
+
+/* =========================================================
+   MIS PADRINOS
+========================================================= */
+
+.family-section .sub-heading {
+
+    margin:
+        var(--family-subheading-margin);
+
+    font-family:
+        var(--family-subheading-font);
+
+    font-size:
+        var(--family-subheading-size);
+
+    font-weight:
+        var(--family-subheading-weight);
+
+    line-height:
+        var(--family-subheading-line-height);
+
+    letter-spacing:
+        var(--family-subheading-letter-spacing);
+
+    color:
+        var(--family-subheading-color);
+
+    translate:
+        var(--family-subheading-x)
+        var(--family-subheading-y);
+}
+
+/* =========================================================
+   ANIMACIÓN — FAMILIA
+========================================================= */
+
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.family-section > .section-label,
+.family-section > h2:not(.sub-heading),
+.family-section > .family-card:nth-of-type(1),
+.family-section > .sub-heading,
+.family-section > .family-card:nth-of-type(2) {
+
+    opacity: 0;
+
+    transition:
+        opacity
+        var(--family-anim-duration)
+        var(--family-anim-ease),
+
+        transform
+        var(--family-anim-duration)
+        var(--family-anim-ease);
+
+    transition-delay:
+        0s;
+
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES — ANIMACIÓN
+========================================================= */
+
+
+/* CON LA BENDICIÓN DE */
+
+.family-section > .section-label {
+
+    transform:
+        translate(
+            var(--family-label-from-x),
+            var(--family-label-from-y)
+        );
+
+}
+
+
+/* MIS PADRES */
+
+.family-section > h2:not(.sub-heading) {
+
+    transform:
+        translate(
+            var(--family-heading-from-x),
+            var(--family-heading-from-y)
+        );
+
+}
+
+
+/* TARJETA DE PADRES */
+
+.family-section > .family-card:nth-of-type(1) {
+
+    transform:
+        translate(
+            var(--family-parents-from-x),
+            var(--family-parents-from-y)
+        );
+
+}
+
+
+/* MIS PADRINOS */
+
+.family-section > .sub-heading {
+
+    transform:
+        translate(
+            var(--family-subheading-from-x),
+            var(--family-subheading-from-y)
+        );
+
+}
+
+
+/* TARJETA DE PADRINOS */
+
+.family-section > .family-card:nth-of-type(2) {
+
+    transform:
+        translate(
+            var(--family-godparents-from-x),
+            var(--family-godparents-from-y)
+        );
+
+}
+
+
+/* =========================================================
+   ESTADO FINAL — ANIMACIÓN
+========================================================= */
+
+.family-section.animate-content > .section-label,
+.family-section.animate-content > h2:not(.sub-heading),
+.family-section.animate-content > .family-card:nth-of-type(1),
+.family-section.animate-content > .sub-heading,
+.family-section.animate-content > .family-card:nth-of-type(2) {
+
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+
+}
+
+
+/* =========================================================
+   RETRASOS INDIVIDUALES
+========================================================= */
+
+
+/* 1 — CON LA BENDICIÓN DE */
+
+.family-section.animate-content > .section-label {
+
+    transition-delay:
+        var(--family-label-delay);
+
+}
+
+
+/* 2 — MIS PADRES */
+
+.family-section.animate-content > h2:not(.sub-heading) {
+
+    transition-delay:
+        var(--family-heading-delay);
+
+}
+
+
+/* 3 — PADRES */
+
+.family-section.animate-content > .family-card:nth-of-type(1) {
+
+    transition-delay:
+        var(--family-parents-delay);
+
+}
+
+
+/* 4 — MIS PADRINOS */
+
+.family-section.animate-content > .sub-heading {
+
+    transition-delay:
+        var(--family-subheading-delay);
+
+}
+
+
+/* 5 — PADRINOS */
+
+.family-section.animate-content > .family-card:nth-of-type(2) {
+
+    transition-delay:
+        var(--family-godparents-delay);
+
+}
+/* =========================================================
+   EVENTOS
+========================================================= */
+
+.event-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: var(--event-min-height);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+}
+
+
+.event-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    margin: var(--event-frame-margin);
+
+    border:
+        1px solid
+        rgba(
+            229,
+            207,
+            156,
+            .15
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FONDO CEREMONIA
+========================================================= */
+
+.ceremony {
+
+    background:
+        linear-gradient(
+            rgba(5, 4, 3, 0),
+            rgba(5, 4, 3, 0)
+        ),
+        url('../images/Fondo 1.jpg')
+        center center /
+        cover no-repeat;
+}
+
+
+/* =========================================================
+   FONDO RECEPCIÓN
+========================================================= */
+
+.reception {
+
+    background:
+        linear-gradient(
+            rgba(5, 4, 3, 0),
+            rgba(5, 4, 3, 0)
+        ),
+        url('../images/Fondo 1.jpg')
+        center center /
+        cover no-repeat;
+}
+
+/* =========================================================
+   CONTENIDO DEL EVENTO
+========================================================= */
+
+.event-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: var(--event-content-max-width);
+
+    padding: var(--event-content-padding);
+}
+
+
+/* =========================================================
+   PNG DEL EVENTO
+========================================================= */
+
+.event-image {
+
+    display: block;
+
+    width: var(--event-image-width);
+
+    max-width: 80%;
+
+    height: auto;
+
+    margin:
+        0 auto
+        var(--event-image-margin-bottom);
+}
+
+
+/* =========================================================
+   TÍTULO DEL EVENTO
+========================================================= */
+
+.event-content h2 {
+
+    margin: var(--event-title-margin);
+
+    font-family: var(--event-title-font);
+
+    font-size: var(--event-title-size);
+
+    font-weight: var(--event-title-weight);
+
+    line-height: var(--event-title-line-height);
+}
+
+
+/* =========================================================
+   HORA DEL EVENTO
+========================================================= */
+
+.event-time {
+
+    margin-bottom: var(--event-time-margin-bottom);
+
+    font-family: var(--event-time-font);
+
+    font-size: min(var(--event-time-size), 9vw);
+
+    color: var(--event-time-color);
+}
+
+
+/* =========================================================
+   BOTONES DORADOS
+========================================================= */
+
+.gold-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: var(--gold-button-padding);
+
+    border:
+        1px solid
+        var(--gold);
+
+    font-size: var(--gold-button-size);
+
+    font-weight: var(--gold-button-weight);
+
+    letter-spacing: var(--gold-button-letter-spacing);
+
+    text-transform: uppercase;
+
+    transition:
+        background .4s ease,
+        color .4s ease,
+        transform .4s ease;
+}
+
+
+.gold-button:hover {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+    transform: translateY(-2px);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — EVENTOS
+   CEREMONIA + RECEPCIÓN + PNG
+========================================================= */
+
+.ceremony .section-label,
+.ceremony .event-image,
+.ceremony .event-content h2,
+.ceremony .event-time,
+.ceremony .gold-button,
+
+.reception .section-label,
+.reception .event-image,
+.reception .event-content h2,
+.reception .event-time,
+.reception .gold-button {
+    opacity: 0;
+
+    transition:
+        opacity var(--event-anim-duration) var(--event-anim-ease),
+        transform var(--event-anim-duration) var(--event-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* =========================================================
+   CEREMONIA — POSICIÓN INICIAL
+========================================================= */
+
+/* Etiqueta */
+.ceremony .section-label {
+    transform:
+        translate(
+            var(--ceremony-label-from-x),
+            var(--ceremony-label-from-y)
+        );
+}
+
+/* PNG */
+.ceremony .event-image {
+    transform:
+        translate(
+            var(--ceremony-image-from-x),
+            var(--ceremony-image-from-y)
+        );
+}
+
+/* Título */
+.ceremony .event-content h2 {
+    transform:
+        translate(
+            var(--ceremony-title-from-x),
+            var(--ceremony-title-from-y)
+        );
+}
+
+/* Hora */
+.ceremony .event-time {
+    transform:
+        translate(
+            var(--ceremony-time-from-x),
+            var(--ceremony-time-from-y)
+        );
+}
+
+/* Botón */
+.ceremony .gold-button {
+    transform:
+        translate(
+            var(--ceremony-button-from-x),
+            var(--ceremony-button-from-y)
+        );
+}
+
+
+/* =========================================================
+   CEREMONIA — ESTADO FINAL
+========================================================= */
+
+.ceremony.animate-content .section-label,
+.ceremony.animate-content .event-image,
+.ceremony.animate-content .event-content h2,
+.ceremony.animate-content .event-time,
+.ceremony.animate-content .gold-button {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   CEREMONIA — RETRASOS
+========================================================= */
+
+.ceremony.animate-content .section-label {
+    transition-delay: var(--ceremony-label-delay);
+}
+
+.ceremony.animate-content .event-image {
+    transition-delay: var(--ceremony-image-delay);
+}
+
+.ceremony.animate-content .event-content h2 {
+    transition-delay: var(--ceremony-title-delay);
+}
+
+.ceremony.animate-content .event-time {
+    transition-delay: var(--ceremony-time-delay);
+}
+
+.ceremony.animate-content .gold-button {
+    transition-delay: var(--ceremony-button-delay);
+}
+
+
+/* =========================================================
+   RECEPCIÓN — POSICIÓN INICIAL
+========================================================= */
+
+/* Etiqueta */
+.reception .section-label {
+    transform:
+        translate(
+            var(--reception-label-from-x),
+            var(--reception-label-from-y)
+        );
+}
+
+/* PNG */
+.reception .event-image {
+    transform:
+        translate(
+            var(--reception-image-from-x),
+            var(--reception-image-from-y)
+        );
+}
+
+/* Título */
+.reception .event-content h2 {
+    transform:
+        translate(
+            var(--reception-title-from-x),
+            var(--reception-title-from-y)
+        );
+}
+
+/* Hora */
+.reception .event-time {
+    transform:
+        translate(
+            var(--reception-time-from-x),
+            var(--reception-time-from-y)
+        );
+}
+
+/* Botón */
+.reception .gold-button {
+    transform:
+        translate(
+            var(--reception-button-from-x),
+            var(--reception-button-from-y)
+        );
+}
+
+
+/* =========================================================
+   RECEPCIÓN — ESTADO FINAL
+========================================================= */
+
+.reception.animate-content .section-label,
+.reception.animate-content .event-image,
+.reception.animate-content .event-content h2,
+.reception.animate-content .event-time,
+.reception.animate-content .gold-button {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   RECEPCIÓN — RETRASOS
+========================================================= */
+
+.reception.animate-content .section-label {
+    transition-delay: var(--reception-label-delay);
+}
+
+.reception.animate-content .event-image {
+    transition-delay: var(--reception-image-delay);
+}
+
+.reception.animate-content .event-content h2 {
+    transition-delay: var(--reception-title-delay);
+}
+
+.reception.animate-content .event-time {
+    transition-delay: var(--reception-time-delay);
+}
+
+.reception.animate-content .gold-button {
+    transition-delay: var(--reception-button-delay);
+}
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.gallery-section {
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url('../images/fondo dorado.jpg')
+        center center / cover no-repeat;
+}
+
+
+/* =========================================================
+   TEXTO — MOMENTOS
+========================================================= */
+
+.gallery-section .section-label {
+
+    margin: var(--gallery-label-margin);
+
+    font-family: var(--gallery-label-font);
+
+    font-size: var(--gallery-label-size);
+
+    font-weight: var(--gallery-label-weight);
+
+    letter-spacing: var(--gallery-label-letter-spacing);
+
+    color: var(--gallery-label-color);
+
+    translate:
+        var(--gallery-label-x)
+        var(--gallery-label-y);
+}
+
+
+/* =========================================================
+   TÍTULO — UN POCO DE MÍ
+========================================================= */
+
+.gallery-section h2 {
+
+    margin: var(--gallery-title-margin);
+
+    font-family: var(--gallery-title-font);
+
+    font-size:
+        min(
+            var(--gallery-title-size),
+            12vw
+        );
+
+    font-weight: var(--gallery-title-weight);
+
+    line-height: var(--gallery-title-line-height);
+
+    color: var(--gallery-title-color);
+
+    translate:
+        var(--gallery-title-x)
+        var(--gallery-title-y);
+}
+
+
+/* =========================================================
+   CONTENEDOR DE GALERÍA
+========================================================= */
+
+.gallery {
+
+    width: 100%;
+
+    max-width: var(--gallery-max-width);
+
+    margin: var(--gallery-margin);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
+
+    gap: var(--gallery-gap);
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   CADA FOTO
+========================================================= */
+
+.gallery-item {
+
+    position: relative;
+
+    min-height: var(--gallery-item-min-height);
+
+    overflow: hidden;
+
+    background: transparent;
+}
+
+
+/* =========================================================
+   FOTO GRANDE
+========================================================= */
+
+.gallery-item.large {
+
+    grid-row: span 2;
+}
+
+
+/* =========================================================
+   FOTO ANCHA
+========================================================= */
+
+.gallery-item.wide {
+
+    grid-column: span 2;
+}
+
+
+/* =========================================================
+   IMÁGENES
+========================================================= */
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 1s ease;
+
+    object-position:
+        var(--gallery-img-x)
+        var(--gallery-img-y);
+}
+
+
+/* =========================================================
+   POSICIÓN INDIVIDUAL DE CADA IMAGEN
+========================================================= */
+
+/* FOTO 1 */
+
+.gallery-item:nth-child(1) img {
+
+    object-position:
+        var(--gallery-img-1-x)
+        var(--gallery-img-1-y);
+}
+
+
+/* FOTO 2 */
+
+.gallery-item:nth-child(2) img {
+
+    object-position:
+        var(--gallery-img-2-x)
+        var(--gallery-img-2-y);
+}
+
+
+/* FOTO 3 */
+
+.gallery-item:nth-child(3) img {
+
+    object-position:
+        var(--gallery-img-3-x)
+        var(--gallery-img-3-y);
+}
+
+
+/* FOTO 4 */
+
+.gallery-item:nth-child(4) img {
+
+    object-position:
+        var(--gallery-img-4-x)
+        var(--gallery-img-4-y);
+}
+
+
+/* FOTO 5 */
+
+.gallery-item:nth-child(5) img {
+
+    object-position:
+        var(--gallery-img-5-x)
+        var(--gallery-img-5-y);
+}
+
+
+/* FOTO 6 */
+
+.gallery-item:nth-child(6) img {
+
+    object-position:
+        var(--gallery-img-6-x)
+        var(--gallery-img-6-y);
+}
+
+
+/* FOTO 7 */
+
+.gallery-item:nth-child(7) img {
+
+    object-position:
+        var(--gallery-img-7-x)
+        var(--gallery-img-7-y);
+}
+
+
+/* FOTO 8 */
+
+.gallery-item:nth-child(8) img {
+
+    object-position:
+        var(--gallery-img-8-x)
+        var(--gallery-img-8-y);
+}
+
+
+/* FOTO 9 */
+
+.gallery-item:nth-child(9) img {
+
+    object-position:
+        var(--gallery-img-9-x)
+        var(--gallery-img-9-y);
+}
+
+
+/* FOTO 10 */
+
+.gallery-item:nth-child(10) img {
+
+    object-position:
+        var(--gallery-img-10-x)
+        var(--gallery-img-10-y);
+}
+
+
+/* FOTO 11 */
+
+.gallery-item:nth-child(11) img {
+
+    object-position:
+        var(--gallery-img-11-x)
+        var(--gallery-img-11-y);
+}
+
+
+/* FOTO 12 */
+
+.gallery-item:nth-child(12) img {
+
+    object-position:
+        var(--gallery-img-12-x)
+        var(--gallery-img-12-y);
+}
+
+
+/* =========================================================
+   EFECTO AL PASAR EL CURSOR
+========================================================= */
+
+.gallery-item:hover img {
+
+    transform: scale(1.05);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — GALERÍA
+   MOMENTOS + UN POCO DE MÍ + 12 FOTOS
+========================================================= */
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.gallery-section .section-label,
+.gallery-section h2,
+.gallery-section .gallery-item {
+    opacity: 0;
+
+    transition:
+        opacity var(--gallery-anim-duration) var(--gallery-anim-ease),
+        transform var(--gallery-anim-duration) var(--gallery-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* =========================================================
+   TEXTO — POSICIÓN INICIAL
+========================================================= */
+
+.gallery-section .section-label {
+    transform:
+        translate(
+            var(--gallery-label-from-x),
+            var(--gallery-label-from-y)
+        );
+}
+
+.gallery-section h2 {
+    transform:
+        translate(
+            var(--gallery-title-from-x),
+            var(--gallery-title-from-y)
+        );
+}
+
+
+/* =========================================================
+   FOTOS — POSICIÓN INICIAL
+========================================================= */
+
+.gallery-section .gallery-item {
+    transform:
+        translate(
+            var(--gallery-img-from-x),
+            var(--gallery-img-from-y)
+        );
+}
+
+
+/* =========================================================
+   ESTADO FINAL
+========================================================= */
+
+.gallery-section.animate-content .section-label,
+.gallery-section.animate-content h2,
+.gallery-section.animate-content .gallery-item {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   RETRASO — TEXTOS
+========================================================= */
+
+.gallery-section.animate-content .section-label {
+    transition-delay:
+        var(--gallery-label-delay);
+}
+
+.gallery-section.animate-content h2 {
+    transition-delay:
+        var(--gallery-title-delay);
+}
+
+
+/* =========================================================
+   RETRASO — FOTOS INDIVIDUALES
+========================================================= */
+
+.gallery-section.animate-content
+.gallery-item:nth-child(1) {
+    transition-delay:
+        var(--gallery-img-1-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(2) {
+    transition-delay:
+        var(--gallery-img-2-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(3) {
+    transition-delay:
+        var(--gallery-img-3-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(4) {
+    transition-delay:
+        var(--gallery-img-4-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(5) {
+    transition-delay:
+        var(--gallery-img-5-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(6) {
+    transition-delay:
+        var(--gallery-img-6-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(7) {
+    transition-delay:
+        var(--gallery-img-7-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(8) {
+    transition-delay:
+        var(--gallery-img-8-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(9) {
+    transition-delay:
+        var(--gallery-img-9-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(10) {
+    transition-delay:
+        var(--gallery-img-10-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(11) {
+    transition-delay:
+        var(--gallery-img-11-delay);
+}
+
+.gallery-section.animate-content
+.gallery-item:nth-child(12) {
+    transition-delay:
+        var(--gallery-img-12-delay);
+}
+
+/* =========================================================
+   VESTIMENTA
+========================================================= */
+
+.dress-section {
+
+    background:
+        linear-gradient(
+            rgba(5, 4, 3, 0),
+            rgba(5, 4, 3, 0)
+        ),
+        url('../images/Fondo 3.jpg')
+        center center /
+        cover no-repeat;
+
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   ETIQUETA
+   CÓDIGO DE VESTIMENTA
+========================================================= */
+
+.dress-section .section-label {
+
+    margin: var(--dress-label-margin);
+
+    font-family: var(--dress-label-font);
+
+    font-size: var(--dress-label-size);
+
+    font-weight: var(--dress-label-weight);
+
+    letter-spacing: var(--dress-label-letter-spacing);
+
+    color: var(--dress-label-color);
+
+    translate:
+        var(--dress-label-x)
+        var(--dress-label-y);
+}
+
+
+/* =========================================================
+   ICONO PNG
+========================================================= */
+
+.dress-section .dress-icon {
+
+    margin: var(--dress-icon-margin);
+
+    translate:
+        var(--dress-icon-x)
+        var(--dress-icon-y);
+}
+
+.dress-section .dress-icon img {
+
+    display: block;
+
+    width: var(--dress-icon-size);
+
+    max-width: 16vw;
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+/* =========================================================
+   TÍTULO
+   Formal
+========================================================= */
+
+.dress-section h2 {
+
+    margin: var(--dress-title-margin);
+
+    font-family: var(--dress-title-font);
+
+    font-size:
+        min(
+            var(--dress-title-size),
+            14vw
+        );
+
+    font-weight: var(--dress-title-weight);
+
+    letter-spacing: var(--dress-title-letter-spacing);
+
+    line-height: 1;
+
+    color: var(--dress-title-color);
+
+    translate:
+        var(--dress-title-x)
+        var(--dress-title-y);
+}
+
+
+.dress-section  .ornament {
+
+    display: block;
+
+    width: var(--dress-ornament-width);
+
+    height: auto;
+
+    margin: 0 auto;
+
+    transform:
+        translateY(var(--dress-ornament-position-y));
+}
+
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — VESTIMENTA
+   CÓDIGO + PNG + FORMAL + TEXTO
+========================================================= */
+
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.dress-section .section-label,
+.dress-section .dress-icon,
+.dress-section h2,
+.dress-section .ornament {
+    opacity: 0;
+
+    transition:
+        opacity var(--dress-anim-duration) var(--dress-anim-ease),
+        transform var(--dress-anim-duration) var(--dress-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES
+========================================================= */
+
+
+/* CÓDIGO DE VESTIMENTA */
+
+.dress-section .section-label {
+    transform:
+        translate(
+            var(--dress-label-from-x),
+            var(--dress-label-from-y)
+        );
+}
+
+
+/* PNG */
+
+.dress-section .dress-icon {
+    transform:
+        translate(
+            var(--dress-icon-from-x),
+            var(--dress-icon-from-y)
+        );
+}
+
+
+/* FORMAL */
+
+.dress-section h2 {
+    transform:
+        translate(
+            var(--dress-title-from-x),
+            var(--dress-title-from-y)
+        );
+}
+
+
+/* TEXTO */
+
+.dress-section .ornament {
+    transform:
+        translate(
+            var(--dress-ornament-from-x),
+            var(--dress-ornament-from-y)
+        );
+}
+
+
+/* =========================================================
+   ESTADO FINAL
+========================================================= */
+
+.dress-section.animate-content .section-label,
+.dress-section.animate-content .dress-icon,
+.dress-section.animate-content h2,
+.dress-section.animate-content .ornament {
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+}
+
+
+/* =========================================================
+   RETRASOS INDIVIDUALES
+========================================================= */
+
+
+/* 1 — CÓDIGO DE VESTIMENTA */
+
+.dress-section.animate-content .section-label {
+    transition-delay:
+        var(--dress-label-delay);
+}
+
+
+/* 2 — PNG */
+
+.dress-section.animate-content .dress-icon {
+    transition-delay:
+        var(--dress-icon-delay);
+}
+
+
+/* 3 — FORMAL */
+
+.dress-section.animate-content h2 {
+    transition-delay:
+        var(--dress-title-delay);
+}
+
+
+/* 4 — TEXTO */
+
+.dress-section.animate-content .ornament {
+    transition-delay:
+        var(--dress-ornament-delay);
+}
+
+/* =========================================================
+   SOBRES
+========================================================= */
+
+.envelopes-section {
+
+    background:
+        linear-gradient(
+            rgba(5, 4, 3, 0),
+            rgba(5, 4, 3, 0)
+        ),
+        url('../images/Fondo 3.jpg')
+        center center /
+        cover no-repeat;
+
+    color: var(--text-dark);
+}
+
+
+/* =========================================================
+   ETIQUETA
+========================================================= */
+
+.envelopes-section .section-label {
+
+    margin: var(--envelope-label-margin);
+
+    font-family: var(--envelope-label-font);
+
+    font-size: var(--envelope-label-size);
+
+    font-weight: var(--envelope-label-weight);
+
+    letter-spacing: var(--envelope-label-letter-spacing);
+
+    color: var(--envelope-label-color);
+
+    translate:
+        var(--envelope-label-x)
+        var(--envelope-label-y);
+}
+
+
+/* =========================================================
+   ICONO PNG
+========================================================= */
+
+.envelopes-section .envelope-icon {
+
+    margin: var(--envelope-icon-margin);
+
+    translate:
+        var(--envelope-icon-x)
+        var(--envelope-icon-y);
+}
+
+
+.envelopes-section .envelope-icon img {
+
+    display: block;
+
+    width: var(--envelope-icon-size);
+
+    max-width: 16vw;
+
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   TÍTULO
+========================================================= */
+
+.envelopes-section h2 {
+
+    margin: var(--envelope-title-margin);
+
+    font-family: var(--envelope-title-font);
+
+    font-size:
+        min(
+            var(--envelope-title-size),
+            14vw
+        );
+
+    font-weight: var(--envelope-title-weight);
+
+    letter-spacing: var(--envelope-title-letter-spacing);
+
+    line-height: 1;
+
+    color: var(--envelope-title-color);
+
+    translate:
+        var(--envelope-title-x)
+        var(--envelope-title-y);
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.envelopes-section p {
+
+    margin: var(--envelope-text-margin);
+
+    font-family: var(--envelope-text-font);
+
+    font-size:
+        min(
+            var(--envelope-text-size),
+            6vw
+        );
+
+    font-weight: var(--envelope-text-weight);
+
+    line-height: var(--envelope-text-line-height);
+
+    letter-spacing: var(--envelope-text-letter-spacing);
+
+    color: var(--envelope-text-color);
+
+    translate:
+        var(--envelope-text-x)
+        var(--envelope-text-y);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — SOBRES
+   ETIQUETA + PNG + TÍTULO + TEXTO
+========================================================= */
+
+/* ---------------------------------------------------------
+   ESTADO INICIAL
+--------------------------------------------------------- */
+
+.envelopes-section .section-label,
+.envelopes-section .envelope-icon,
+.envelopes-section h2,
+.envelopes-section p {
+    opacity: 0;
+
+    transition:
+        opacity var(--envelope-anim-duration) var(--envelope-anim-ease),
+        transform var(--envelope-anim-duration) var(--envelope-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ---------------------------------------------------------
+   POSICIONES INICIALES
+--------------------------------------------------------- */
+
+/* ETIQUETA */
+.envelopes-section .section-label {
+    transform:
+        translate(
+            var(--envelope-label-from-x),
+            var(--envelope-label-from-y)
+        );
+}
+
+
+/* PNG */
+.envelopes-section .envelope-icon {
+    transform:
+        translate(
+            var(--envelope-icon-from-x),
+            var(--envelope-icon-from-y)
+        );
+}
+
+
+/* TÍTULO */
+.envelopes-section h2 {
+    transform:
+        translate(
+            var(--envelope-title-from-x),
+            var(--envelope-title-from-y)
+        );
+}
+
+
+/* TEXTO */
+.envelopes-section p {
+    transform:
+        translate(
+            var(--envelope-text-from-x),
+            var(--envelope-text-from-y)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ESTADO FINAL
+--------------------------------------------------------- */
+
+.envelopes-section.animate-content .section-label,
+.envelopes-section.animate-content .envelope-icon,
+.envelopes-section.animate-content h2,
+.envelopes-section.animate-content p {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   RETRASOS INDIVIDUALES
+--------------------------------------------------------- */
+
+.envelopes-section.animate-content .section-label {
+    transition-delay:
+        var(--envelope-label-delay);
+}
+
+.envelopes-section.animate-content .envelope-icon {
+    transition-delay:
+        var(--envelope-icon-delay);
+}
+
+.envelopes-section.animate-content h2 {
+    transition-delay:
+        var(--envelope-title-delay);
+}
+
+.envelopes-section.animate-content p {
+    transition-delay:
+        var(--envelope-text-delay);
+}
+/* =========================================================
+   TIMELINE / PROGRAMA
+========================================================= */
+
+.timeline-section {
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url('../images/fondo dorado.jpg')
+        center center / cover no-repeat;
+}
+
+
+/* =========================================================
+   ETIQUETA DE SECCIÓN
+   EL GRAN DÍA
+========================================================= */
+
+.timeline-section > .section-label {
+
+    margin: var(--timeline-section-label-margin);
+
+    font-family: var(--timeline-section-label-font);
+
+    font-size:
+        min(
+            var(--timeline-section-label-size),
+            6vw
+        );
+
+    font-weight: var(--timeline-section-label-weight);
+
+    letter-spacing: var(--timeline-section-label-letter-spacing);
+
+    color: var(--timeline-section-label-color);
+
+    translate:
+        var(--timeline-section-label-x)
+        var(--timeline-section-label-y);
+}
+
+
+/* =========================================================
+   TÍTULO DE SECCIÓN
+   Programa
+========================================================= */
+
+.timeline-section > h2 {
+
+    margin: var(--timeline-section-title-margin);
+
+    font-family: var(--timeline-section-title-font);
+
+    font-size:
+        min(
+            var(--timeline-section-title-size),
+            14vw
+        );
+
+    font-weight: var(--timeline-section-title-weight);
+
+    letter-spacing: var(--timeline-section-title-letter-spacing);
+
+    line-height: var(--timeline-section-title-line-height);
+
+    color: var(--timeline-section-title-color);
+
+    translate:
+        var(--timeline-section-title-x)
+        var(--timeline-section-title-y);
+}
+
+
+/* =========================================================
+   CONTENEDOR
+========================================================= */
+
+.timeline {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: var(--timeline-max-width);
+
+    margin: var(--timeline-margin);
+}
+
+
+/* =========================================================
+   LÍNEA CENTRAL
+========================================================= */
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: var(--timeline-line-x);
+
+    top: 0;
+
+    bottom: 0;
+
+    width: var(--timeline-line-width);
+
+    background: var(--timeline-line-color);
+}
+
+
+/* =========================================================
+   CADA EVENTO
+========================================================= */
+
+.timeline-item {
+
+    position: relative;
+
+    padding: var(--timeline-item-padding);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: var(--timeline-item-gap);
+
+    text-align: center;
+
+    translate:
+        var(--timeline-item-x)
+        var(--timeline-item-y);
+}
+
+
+/* =========================================================
+   PUNTO
+========================================================= */
+
+.timeline-item::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: var(--timeline-dot-x);
+
+    top: var(--timeline-dot-y);
+
+    width: var(--timeline-dot-size);
+
+    height: var(--timeline-dot-size);
+
+    border-radius: 50%;
+
+    background: var(--timeline-dot-color);
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* =========================================================
+   HORA / ETIQUETA
+========================================================= */
+
+.timeline-item span {
+
+    margin: var(--timeline-label-margin);
+
+    font-family: var(--timeline-label-font);
+
+    font-size:
+        min(
+            var(--timeline-label-size),
+            6vw
+        );
+
+    font-weight: var(--timeline-label-weight);
+
+    letter-spacing: var(--timeline-label-letter-spacing);
+
+    line-height: 1.2;
+
+    color: var(--timeline-label-color);
+
+    translate:
+        var(--timeline-label-x)
+        var(--timeline-label-y);
+}
+
+
+/* =========================================================
+   NOMBRE DEL EVENTO
+========================================================= */
+
+.timeline-item strong {
+
+    margin: var(--timeline-title-margin);
+
+    font-family: var(--timeline-title-font);
+
+    font-size:
+        min(
+            var(--timeline-title-size),
+            10vw
+        );
+
+    font-weight: var(--timeline-title-weight);
+
+    letter-spacing: var(--timeline-title-letter-spacing);
+
+    line-height: var(--timeline-title-line-height);
+
+    color: var(--timeline-title-color);
+
+    translate:
+        var(--timeline-title-x)
+        var(--timeline-title-y);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — TIMELINE / PROGRAMA
+   EL GRAN DÍA + PROGRAMA + EVENTOS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   ESTADO INICIAL
+--------------------------------------------------------- */
+
+.timeline-section > .section-label,
+.timeline-section > h2,
+.timeline-section .timeline-item {
+    opacity: 0;
+
+    transition:
+        opacity var(--timeline-anim-duration) var(--timeline-anim-ease),
+        transform var(--timeline-anim-duration) var(--timeline-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ---------------------------------------------------------
+   POSICIONES INICIALES
+--------------------------------------------------------- */
+
+/* EL GRAN DÍA */
+.timeline-section > .section-label {
+    transform:
+        translate(
+            var(--timeline-section-label-from-x),
+            var(--timeline-section-label-from-y)
+        );
+}
+
+
+/* PROGRAMA */
+.timeline-section > h2 {
+    transform:
+        translate(
+            var(--timeline-section-title-from-x),
+            var(--timeline-section-title-from-y)
+        );
+}
+
+
+/* EVENTOS */
+.timeline-section .timeline-item {
+    transform:
+        translate(
+            var(--timeline-item-from-x),
+            var(--timeline-item-from-y)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ESTADO FINAL
+--------------------------------------------------------- */
+
+.timeline-section.animate-content > .section-label,
+.timeline-section.animate-content > h2,
+.timeline-section.animate-content .timeline-item {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   RETRASOS — ENCABEZADO
+--------------------------------------------------------- */
+
+.timeline-section.animate-content > .section-label {
+    transition-delay:
+        var(--timeline-section-label-delay);
+}
+
+.timeline-section.animate-content > h2 {
+    transition-delay:
+        var(--timeline-section-title-delay);
+}
+
+
+/* ---------------------------------------------------------
+   RETRASOS — EVENTOS INDIVIDUALES
+--------------------------------------------------------- */
+
+.timeline-section.animate-content
+.timeline-item:nth-child(1) {
+    transition-delay:
+        var(--timeline-item-1-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(2) {
+    transition-delay:
+        var(--timeline-item-2-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(3) {
+    transition-delay:
+        var(--timeline-item-3-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(4) {
+    transition-delay:
+        var(--timeline-item-4-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(5) {
+    transition-delay:
+        var(--timeline-item-5-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(6) {
+    transition-delay:
+        var(--timeline-item-6-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(7) {
+    transition-delay:
+        var(--timeline-item-7-delay);
+}
+
+.timeline-section.animate-content
+.timeline-item:nth-child(8) {
+    transition-delay:
+        var(--timeline-item-8-delay);
+}
+
+/* =========================================================
+   PASE
+========================================================= */
+
+.pass-section {
+
+    width: 100%;
+
+    padding: var(--pass-section-padding);
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url('../images/Fondo 3.jpg')
+        center center / cover no-repeat;
+}
+
+
+.pass-card {
+
+    width: 100%;
+
+    max-width: var(--pass-card-max-width);
+margin: auto;
+
+    padding: var(--pass-card-padding);
+text-align: center;
+
+    color: #7f2855;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffdf8,
+            #e9dfce
+        );
+
+    border:
+        1px solid var(--gold);
+
+    box-shadow:
+        0 30px 80px
+        rgba(
+            0,
+            0,
+            0,
+            .25
+        );
+}
+
+
+.pass-card .section-label {
+
+    color: #7f2855;
+}
+
+
+.pass-card h2 {
+    margin: var(--pass-title-margin);
+
+    font-family: var(--pass-title-font);
+
+    font-size: min(var(--pass-title-size), 18vw);
+
+    font-weight: var(--pass-title-weight);
+}
+
+
+.pass-name {
+    font-family: var(--pass-name-font);
+
+    font-size: min(var(--pass-name-size), 12vw);
+font-style: italic;
+}
+
+
+.pass-line {
+    width: var(--pass-line-width);
+height: 1px;
+
+    margin: var(--pass-line-margin);
+
+    background: var(--pass-line-color);
+}
+
+
+.pass-card p {
+    margin: var(--pass-text-margin);
+
+    font-size: var(--pass-text-size);
+
+    letter-spacing: var(--pass-text-letter-spacing);
+text-transform: uppercase;
+}
+
+
+.pass-number {
+
+    display: block;
+
+    margin: var(--pass-number-margin);
+
+    font-family: var(--pass-number-font);
+
+    font-size: min(var(--pass-number-size), 15vw);
+
+    font-weight: var(--pass-number-weight);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — PASE DE INVITACIÓN
+   ETIQUETA + TÍTULO + NOMBRE + LÍNEA + TEXTO + NÚMERO
+========================================================= */
+
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.pass-section .pass-card .section-label,
+.pass-section .pass-card h2,
+.pass-section .pass-card .pass-name,
+.pass-section .pass-card .pass-line,
+.pass-section .pass-card p,
+.pass-section .pass-card .pass-number {
+
+    opacity: 0;
+
+    transition:
+        opacity var(--pass-anim-duration) var(--pass-anim-ease),
+        transform var(--pass-anim-duration) var(--pass-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES
+========================================================= */
+
+/* 1 — PASE DE INVITACIÓN */
+
+.pass-section .pass-card .section-label {
+    transform:
+        translate(
+            var(--pass-label-from-x),
+            var(--pass-label-from-y)
+        );
+}
+
+
+/* 2 — MIS XV */
+
+.pass-section .pass-card h2 {
+    transform:
+        translate(
+            var(--pass-title-from-x),
+            var(--pass-title-from-y)
+        );
+}
+
+
+/* 3 — Emma Vanessa */
+
+.pass-section .pass-card .pass-name {
+    transform:
+        translate(
+            var(--pass-name-from-x),
+            var(--pass-name-from-y)
+        );
+}
+
+
+/* 4 — LÍNEA */
+
+.pass-section .pass-card .pass-line {
+    transform:
+        translate(
+            var(--pass-line-from-x),
+            var(--pass-line-from-y)
+        );
+}
+
+
+/* 5 — PASE PARA */
+
+.pass-section .pass-card p {
+    transform:
+        translate(
+            var(--pass-text-from-x),
+            var(--pass-text-from-y)
+        );
+}
+
+
+/* 6 — NÚMERO */
+
+.pass-section .pass-card .pass-number {
+    transform:
+        translate(
+            var(--pass-number-from-x),
+            var(--pass-number-from-y)
+        );
+}
+
+
+/* =========================================================
+   ESTADO FINAL
+========================================================= */
+
+.pass-section.animate-content .pass-card .section-label,
+.pass-section.animate-content .pass-card h2,
+.pass-section.animate-content .pass-card .pass-name,
+.pass-section.animate-content .pass-card .pass-line,
+.pass-section.animate-content .pass-card p,
+.pass-section.animate-content .pass-card .pass-number {
+
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+}
+
+
+/* =========================================================
+   RETRASOS
+========================================================= */
+
+/* 1 — PASE DE INVITACIÓN */
+
+.pass-section.animate-content .pass-card .section-label {
+    transition-delay:
+        var(--pass-label-delay);
+}
+
+
+/* 2 — MIS XV */
+
+.pass-section.animate-content .pass-card h2 {
+    transition-delay:
+        var(--pass-title-delay);
+}
+
+
+/* 3 — Emma Vanessa */
+
+.pass-section.animate-content .pass-card .pass-name {
+    transition-delay:
+        var(--pass-name-delay);
+}
+
+
+/* 4 — LÍNEA */
+
+.pass-section.animate-content .pass-card .pass-line {
+    transition-delay:
+        var(--pass-line-delay);
+}
+
+
+/* 5 — PASE PARA */
+
+.pass-section.animate-content .pass-card p {
+    transition-delay:
+        var(--pass-text-delay);
+}
+
+
+/* 6 — NÚMERO */
+
+.pass-section.animate-content .pass-card .pass-number {
+    transition-delay:
+        var(--pass-number-delay);
+}
+
+/* =========================================================
+   FORMULARIO DE CONFIRMACIÓN
+========================================================= */
+
+.rsvp-form {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin:
+        var(--rsvp-form-space-top)
+        auto
+        0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        var(--rsvp-form-gap);
+
+}
+
+
+/* =========================================
+   CADA CAMPO
+========================================= */
+
+.rsvp-field {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        var(--rsvp-field-gap);
+
+}
+
+
+/* =========================================
+   ETIQUETAS
+========================================= */
+
+.rsvp-field label,
+.rsvp-label {
+
+    color:
+        var(--rsvp-label-color);
+
+    font-size:
+        var(--rsvp-label-size);
+
+}
+
+
+/* =========================================
+   CAMPOS DE TEXTO
+========================================= */
+
+.rsvp-field input[type="text"] {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding:
+        var(--rsvp-input-padding-y)
+        var(--rsvp-input-padding-x);
+
+    border:
+        1px solid
+        var(--rsvp-input-border-color);
+
+    border-radius:
+        var(--rsvp-input-radius);
+
+    background:
+        var(--rsvp-input-bg);
+
+    color:
+        var(--rsvp-input-color);
+
+    font-size:
+        var(--rsvp-input-size);
+
+    outline: none;
+
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.rsvp-field input::placeholder {
+
+    color:
+        var(--rsvp-placeholder-color);
+
+}
+
+
+/* =========================================
+   CUANDO SE SELECCIONA EL CAMPO
+========================================= */
+
+.rsvp-field input[type="text"]:focus {
+
+    border-color:
+        var(--rsvp-input-focus-color);
+
+}
+
+
+/* =========================================
+   OPCIONES DE RESPUESTA
+========================================= */
+
+.rsvp-option {
+
+    display: flex;
+
+    flex-direction: row !important;
+
+    align-items: center;
+
+    gap:
+        var(--rsvp-option-gap);
+
+    color:
+        var(--rsvp-option-color);
+
+    font-size:
+        var(--rsvp-option-size);
+
+    cursor: pointer;
+
+}
+
+
+/* =========================================
+   RADIO
+========================================= */
+
+.rsvp-option input[type="radio"] {
+
+    width:
+        var(--rsvp-radio-size);
+
+    height:
+        var(--rsvp-radio-size);
+
+    margin: 0;
+
+    flex-shrink: 0;
+
+}
+
+
+/* =========================================
+   ACOMPAÑANTES
+========================================= */
+
+.companions-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        var(--rsvp-companion-gap);
+
+}
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.rsvp-section {
+ width: 100%;
+
+    background:
+        linear-gradient(
+            rgba(9, 8, 7, 0),
+            rgba(9, 8, 7, 0)
+        ),
+        url('../images/Fondo 1.jpg')
+        center center / cover no-repeat;
+ 
+    padding-bottom: var(--rsvp-bottom-padding);
+}
+
+
+.whatsapp-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-top: var(--whatsapp-margin-top);
+
+    padding: var(--whatsapp-padding);
+border-radius: 2px;
+
+    background: var(--whatsapp-bg);
+color: var(--whatsapp-color);
+font-size: min(var(--whatsapp-size), 3vw);
+
+    font-weight: var(--whatsapp-weight);
+
+    letter-spacing: var(--whatsapp-letter-spacing);
+text-transform: uppercase;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.whatsapp-button:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(
+            37,
+            211,
+            102,
+            .25
+        );
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — RSVP
+========================================================= */
+
+.rsvp-section .section-label,
+.rsvp-section h2,
+.rsvp-section p,
+.rsvp-section .whatsapp-button {
+    opacity: 0;
+
+    transition:
+        opacity var(--rsvp-anim-duration) var(--rsvp-anim-ease),
+        transform var(--rsvp-anim-duration) var(--rsvp-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ETIQUETA */
+.rsvp-section .section-label {
+    transform:
+        translate(
+            var(--rsvp-label-from-x),
+            var(--rsvp-label-from-y)
+        );
+}
+
+
+/* TÍTULO */
+.rsvp-section h2 {
+    transform:
+        translate(
+            var(--rsvp-title-from-x),
+            var(--rsvp-title-from-y)
+        );
+}
+
+
+/* TEXTO */
+.rsvp-section p {
+    transform:
+        translate(
+            var(--rsvp-text-from-x),
+            var(--rsvp-text-from-y)
+        );
+}
+
+
+/* BOTÓN */
+.rsvp-section .whatsapp-button {
+    transform:
+        translate(
+            var(--rsvp-button-from-x),
+            var(--rsvp-button-from-y)
+        );
+}
+
+
+/* =========================================================
+   ESTADO FINAL
+========================================================= */
+
+.rsvp-section.animate-content .section-label,
+.rsvp-section.animate-content h2,
+.rsvp-section.animate-content p,
+.rsvp-section.animate-content .whatsapp-button {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* =========================================================
+   RETRASOS
+========================================================= */
+
+.rsvp-section.animate-content .section-label {
+    transition-delay: var(--rsvp-label-delay);
+}
+
+.rsvp-section.animate-content h2 {
+    transition-delay: var(--rsvp-title-delay);
+}
+
+.rsvp-section.animate-content p {
+    transition-delay: var(--rsvp-text-delay);
+}
+
+.rsvp-section.animate-content .whatsapp-button {
+    transition-delay: var(--rsvp-button-delay);
+}
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — FORMULARIO RSVP
+========================================================= */
+
+
+/* =========================================================
+   ESTADO INICIAL
+========================================================= */
+
+.rsvp-form,
+.rsvp-form .rsvp-field,
+.rsvp-form .whatsapp-button {
+
+    opacity: 0;
+
+    transition:
+        opacity var(--rsvp-form-anim-duration)
+        var(--rsvp-anim-ease),
+
+        transform var(--rsvp-form-anim-duration)
+        var(--rsvp-anim-ease);
+
+}
+
+
+/* =========================================================
+   POSICIÓN INICIAL
+========================================================= */
+
+.rsvp-form {
+
+    transform:
+        translateY(
+            var(--rsvp-form-anim-distance)
+        );
+
+}
+
+
+.rsvp-form .rsvp-field {
+
+    transform:
+        translateY(
+            var(--rsvp-form-anim-distance)
+        );
+
+}
+
+/* =========================================================
+   ESTADO FINAL — FORMULARIO RSVP
+========================================================= */
+
+.rsvp-section.animate-content .rsvp-form,
+.rsvp-section.animate-content .rsvp-form .rsvp-field,
+.rsvp-section.animate-content .rsvp-form .whatsapp-button {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   RETRASOS — FORMULARIO RSVP
+========================================================= */
+
+
+/* FORMULARIO */
+
+.rsvp-section.animate-content .rsvp-form {
+
+    transition-delay:
+        var(--rsvp-form-delay);
+
+}
+
+
+/* NOMBRE */
+
+.rsvp-section.animate-content
+.rsvp-form .rsvp-field:nth-child(1) {
+
+    transition-delay:
+        var(--rsvp-name-delay);
+
+}
+
+
+/* RESPUESTA */
+
+.rsvp-section.animate-content
+.rsvp-form .rsvp-field:nth-child(2) {
+
+    transition-delay:
+        var(--rsvp-response-delay);
+
+}
+
+
+/* ACOMPAÑANTES */
+
+.rsvp-section.animate-content
+.rsvp-form .rsvp-field:nth-child(3) {
+
+    transition-delay:
+        var(--rsvp-companions-delay);
+
+}
+
+
+/* BOTÓN */
+
+.rsvp-section.animate-content
+.rsvp-form .whatsapp-button {
+
+    transition-delay:
+        var(--rsvp-button-form-delay);
+
+}
+
+/* =========================================================
+   MÚSICA
+========================================================= */
+
+.music-button {
+
+    position: fixed;
+
+    right: var(--music-right);
+
+    bottom: var(--music-bottom);
+z-index: 500;
+
+    width: min(var(--music-size), 14vw);
+
+    height: min(var(--music-size), 14vw);
+border-radius: 50%;
+
+    border:
+        1px solid var(--gold);
+
+    background: var(--music-bg);
+color: var(--music-color);
+cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.music-button:hover {
+
+    transform: scale(1.05);
+
+    background:
+        rgba(
+            25,
+            20,
+            12,
+            .95
+        );
+}
+
+
+.music-button.playing {
+
+    animation:
+        musicPulse 2s infinite;
+}
+
+
+@keyframes musicPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(
+                201,
+                164,
+                92,
+                .4
+            );
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 0 12px
+            rgba(
+                201,
+                164,
+                92,
+                0
+            );
+    }
+}
+/* =========================================================
+   HOTELES — CONTROL DEL BLOQUE
+========================================================= */
+
+.hotels-section {
+
+    color: var(--text-dark);
+
+    width: 100%;
+
+    padding-top:
+        var(--hotels-space-top);
+
+    padding-bottom:
+        var(--hotels-space-bottom);
+
+    padding-left:
+        var(--hotels-padding-x);
+
+    padding-right:
+        var(--hotels-padding-x);
+
+    margin: 0;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-image:
+        var(--hotels-background-image);
+
+    background-size:
+        var(--hotels-background-size);
+
+    background-position:
+        var(--hotels-background-position);
+
+    background-repeat:
+        var(--hotels-background-repeat);
+
+    transform:
+        translate(
+            var(--hotels-position-x),
+            var(--hotels-position-y)
+        );
+}
+
+/* =========================================================
+   ETIQUETA
+========================================================= */
+
+.hotels-section .section-label {
+
+    color:
+        var(--hotels-label-color);
+
+    font-size:
+        'Cormorant Garamond', serif;
+
+    font-weight:
+        var(--hotels-label-weight);
+
+    letter-spacing:
+        var(--hotels-label-letter-spacing);
+
+    line-height:
+        var(--hotels-label-line-height);
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN
+========================================================= */
+
+.hotels-section p {
+
+    color:
+        var(--hotels-description-color);
+
+    font-size:
+        var(--hotels-description-size);
+
+    font-weight:
+        var(--hotels-description-weight);
+
+    line-height:
+        var(--hotels-description-line-height);
+
+    margin-top:
+        var(--hotels-description-space-top);
+}
+
+
+/* =========================================================
+   LISTA DE HOTELES
+========================================================= */
+
+.hotel-list {
+
+    margin-top:
+        var(--hotels-list-space-top);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap:
+        var(--hotels-gap);
+}
+
+
+/* =========================================================
+   NOMBRE DEL HOTEL
+========================================================= */
+
+.hotel-card h3 {
+
+    color:
+        var(--hotel-name-color);
+
+    font-family:
+        var(--hotel-name-font);
+
+    font-size:
+        var(--hotel-name-size);
+
+    font-weight:
+        var(--hotel-name-weight);
+
+    letter-spacing:
+        var(--hotel-name-letter-spacing);
+
+    line-height:
+        var(--hotel-name-line-height);
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.hotel-card .gold-button {
+
+    margin-top:
+        var(--hotel-button-space-top);
+
+    color:
+        var(--hotel-button-color);
+
+    padding:
+        var(--hotel-button-padding-y)
+        var(--hotel-button-padding-x);
+
+    font-size:
+        var(--hotel-button-font-size);
+
+    font-weight:
+        var(--hotel-button-font-weight);
+
+    letter-spacing:
+        var(--hotel-button-letter-spacing);
+
+    border-radius:
+        var(--hotel-button-radius);
+}
+/* =========================================================
+   HOTELES — ANIMACIÓN DEL BLOQUE
+========================================================= */
+
+.hotels-section {
+
+    opacity: 0;
+
+    transform:
+        translate(
+            var(--hotels-position-x),
+            calc(var(--hotels-position-y) + 70px)
+        );
+
+    transition:
+        opacity 0.9s ease,
+        transform 1s ease;
+}
+
+
+/* =========================================================
+   BLOQUE CUANDO ENTRA
+========================================================= */
+
+.hotels-section.visible {
+
+    opacity: 1;
+
+    transform:
+        translate(
+            var(--hotels-position-x),
+            var(--hotels-position-y)
+        );
+}
+
+
+/* =========================================================
+   BLOQUE CUANDO SALE
+========================================================= */
+
+.hotels-section.exit-up {
+
+    opacity: 0;
+
+    transform:
+        translate(
+            var(--hotels-position-x),
+            calc(var(--hotels-position-y) - 60px)
+        );
+}
+
+
+.hotels-section.exit-down {
+
+    opacity: 0;
+
+    transform:
+        translate(
+            var(--hotels-position-x),
+            calc(var(--hotels-position-y) + 60px)
+        );
+}
+/* =========================================================
+   HOTELES — ANIMACIÓN DEL CONTENIDO
+========================================================= */
+
+.hotels-section .section-label,
+.hotels-section > p,
+.hotels-section .hotel-card {
+
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* =========================================================
+   CUANDO EL BLOQUE ESTÁ ACTIVO
+========================================================= */
+
+.hotels-section.visible .section-label,
+.hotels-section.visible > p,
+.hotels-section.visible .hotel-card {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RETRASOS
+========================================================= */
+
+.hotels-section.visible .section-label {
+    transition-delay: 0.15s;
+}
+
+.hotels-section.visible > p {
+    transition-delay: 0.30s;
+}
+
+.hotels-section.visible .hotel-card:nth-child(1) {
+    transition-delay: 0.50s;
+}
+
+.hotels-section.visible .hotel-card:nth-child(2) {
+    transition-delay: 0.70s;
+}
+
+/* =========================================================
+   HOTELES — ANIMACIÓN DE BOTONES
+========================================================= */
+
+.hotels-section .hotel-card .gold-button {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+/* =========================================================
+   BOTONES CUANDO EL BLOQUE ESTÁ ACTIVO
+========================================================= */
+
+.hotels-section.visible .hotel-card .gold-button {
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   RETRASO DE CADA BOTÓN
+========================================================= */
+
+.hotels-section.visible
+.hotel-card:nth-child(1)
+.gold-button {
+
+    transition-delay: 0.70s;
+}
+
+
+.hotels-section.visible
+.hotel-card:nth-child(2)
+.gold-button {
+
+    transition-delay: 0.90s;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+
+    width: 100%;
+
+    min-height:
+        var(--footer-min-height);
+
+    padding:
+        var(--footer-padding-top)
+        var(--footer-padding-right)
+        var(--footer-padding-bottom)
+        var(--footer-padding-left);
+
+    text-align: center;
+
+    /* =====================================================
+       FONDO JPG
+    ===================================================== */
+
+    background-image:
+        var(--footer-bg-image);
+
+    background-position:
+        var(--footer-bg-x)
+        var(--footer-bg-y);
+
+    background-size:
+        var(--footer-bg-size);
+
+    background-repeat: no-repeat;
+
+    background-color: red;
+
+    color: var(--c-cream);
+
+}
+
+
+/* =========================================================
+   ORNAMENTO PNG
+========================================================= */
+
+.footer .ornament {
+
+    width: 100%;
+
+}
+
+
+.footer .ornament img {
+
+    display: block;
+
+    width:
+        min(
+            var(--footer-ornament-width),
+            70vw
+        );
+
+    height: auto;
+
+    margin:
+        0 auto
+        var(--footer-ornament-margin-bottom);
+
+    translate:
+        var(--footer-ornament-x)
+        var(--footer-ornament-y);
+
+}
+
+
+/* =========================================================
+   TÍTULO — Emma Vanessa
+========================================================= */
+
+.footer h2 {
+
+    margin-top:
+        var(--footer-title-margin-top);
+
+    margin-bottom:
+        var(--footer-title-margin-bottom);
+
+    font-family:
+        var(--footer-title-font);
+
+    font-size:
+        min(
+            var(--footer-title-size),
+            20vw
+        );
+
+    font-weight:
+        var(--footer-title-weight);
+
+    line-height: .9;
+
+    color:
+        var(--footer-title-color);
+
+    translate:
+        var(--footer-title-x)
+        var(--footer-title-y);
+
+}
+
+
+/* =========================================================
+   TEXTO — MIS XV · 2026
+========================================================= */
+
+.footer p {
+
+    margin-top:
+        var(--footer-text-margin-top);
+
+    margin-bottom:
+        var(--footer-text-margin-bottom);
+
+    font-family:
+        var(--footer-text-font);
+
+    font-size:
+        var(--footer-text-size);
+
+    font-weight:
+        var(--footer-text-weight);
+
+    letter-spacing:
+        var(--footer-text-letter-spacing);
+
+    color:
+        var(--footer-text-color);
+
+    translate:
+        var(--footer-text-x)
+        var(--footer-text-y);
+
+}
+
+
+/* =========================================================
+   FIRMA — CON AMOR
+========================================================= */
+
+.footer span {
+
+    display: inline-block;
+
+    margin-top:
+        var(--footer-signature-margin-top);
+
+    font-family:
+        var(--footer-signature-font);
+
+    font-size:
+        var(--footer-signature-size);
+
+    font-weight:
+        var(--footer-signature-weight);
+
+    letter-spacing:
+        var(--footer-signature-letter-spacing);
+
+    font-style: italic;
+
+    color:
+        var(--footer-signature-color);
+
+    translate:
+        var(--footer-signature-x)
+        var(--footer-signature-y);
+
+}
+
+
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — FOOTER
+========================================================= */
+
+.footer .ornament,
+.footer h2,
+.footer p,
+.footer span {
+
+    opacity: 0;
+
+    transition:
+        opacity
+        var(--footer-anim-duration)
+        var(--footer-anim-ease),
+
+        transform
+        var(--footer-anim-duration)
+        var(--footer-anim-ease);
+
+    transition-delay: 0s;
+
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES — ORNAMENTO
+========================================================= */
+
+.footer .ornament {
+
+    transform:
+        translate(
+            var(--footer-ornament-from-x),
+            var(--footer-ornament-from-y)
+        );
+
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES — TÍTULO
+========================================================= */
+
+.footer h2 {
+
+    transform:
+        translate(
+            var(--footer-title-from-x),
+            var(--footer-title-from-y)
+        );
+
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES — TEXTO
+========================================================= */
+
+.footer p {
+
+    transform:
+        translate(
+            var(--footer-text-from-x),
+            var(--footer-text-from-y)
+        );
+
+}
+
+
+/* =========================================================
+   POSICIONES INICIALES — FIRMA
+========================================================= */
+
+.footer span {
+
+    transform:
+        translate(
+            var(--footer-signature-from-x),
+            var(--footer-signature-from-y)
+        );
+
+}
+
+
+/* =========================================================
+   ACTIVACIÓN DE ANIMACIÓN
+========================================================= */
+
+.footer.animate-content .ornament,
+.footer.animate-content h2,
+.footer.animate-content p,
+.footer.animate-content span {
+
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+
+}
+
+
+/* =========================================================
+   RETRASOS INDIVIDUALES
+========================================================= */
+
+.footer.animate-content .ornament {
+
+    transition-delay:
+        var(--footer-ornament-delay);
+
+}
+
+
+.footer.animate-content h2 {
+
+    transition-delay:
+        var(--footer-title-delay);
+
+}
+
+
+.footer.animate-content p {
+
+    transition-delay:
+        var(--footer-text-delay);
+
+}
+
+
+.footer.animate-content span {
+
+    transition-delay:
+        var(--footer-signature-delay);
+
+}
+
+/* =========================================================
+   ANIMACIONES SCROLL
+   ---------------------------------------------------------
+   Animación general para las secciones después del Hero.
+   El efecto .reveal controla la entrada/salida de la sección.
+   
+   La clase .animate-content controla cuándo comienzan las
+   animaciones individuales de los elementos internos.
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(24px);
+
+    transition:
+        opacity .55s cubic-bezier(.22, 1, .36, 1),
+        transform .55s cubic-bezier(.22, 1, .36, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+.reveal.exit-up {
+    opacity: 0;
+
+    transform:
+        translateY(-24px);
+}
+
+.reveal.exit-down {
+    opacity: 0;
+
+    transform:
+        translateY(24px);
+}
+
+
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — INTRO
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ESTADO INICIAL
+--------------------------------------------------------- */
+
+.intro .section-label,
+.intro h2,
+.intro .ornament,
+.intro p:nth-of-type(1),
+.intro p:nth-of-type(2) {
+
+    opacity: 0;
+
+    transition:
+        opacity var(--intro-anim-duration) var(--intro-anim-ease),
+        transform var(--intro-anim-duration) var(--intro-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ---------------------------------------------------------
+   POSICIONES INICIALES
+--------------------------------------------------------- */
+
+.intro .section-label {
+
+    transform:
+        translate(
+            var(--intro-label-from-x),
+            var(--intro-label-from-y)
+        );
+}
+
+.intro h2 {
+
+    transform:
+        translate(
+            var(--intro-title-from-x),
+            var(--intro-title-from-y)
+        );
+}
+
+.intro .ornament {
+
+    transform:
+        translate(
+            var(--intro-ornament-from-x),
+            var(--intro-ornament-from-y)
+        );
+}
+
+.intro p:nth-of-type(1) {
+
+    transform:
+        translate(
+            var(--intro-p1-from-x),
+            var(--intro-p1-from-y)
+        );
+}
+
+.intro p:nth-of-type(2) {
+
+    transform:
+        translate(
+            var(--intro-p2-from-x),
+            var(--intro-p2-from-y)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVACIÓN DE LA ANIMACIÓN
+   ---------------------------------------------------------
+   IMPORTANTE:
+   Ya no usamos .visible aquí.
+   La animación comienza únicamente cuando JS agrega
+   la clase .animate-content.
+--------------------------------------------------------- */
+
+.intro.animate-content .section-label,
+.intro.animate-content h2,
+.intro.animate-content .ornament,
+.intro.animate-content p:nth-of-type(1),
+.intro.animate-content p:nth-of-type(2) {
+
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   DELAYS INDIVIDUALES
+--------------------------------------------------------- */
+
+.intro.animate-content .section-label {
+
+    transition-delay:
+        var(--intro-label-delay);
+}
+
+.intro.animate-content h2 {
+
+    transition-delay:
+        var(--intro-title-delay);
+}
+
+.intro.animate-content .ornament {
+
+    transition-delay:
+        var(--intro-ornament-delay);
+}
+
+.intro.animate-content p:nth-of-type(1) {
+
+    transition-delay:
+        var(--intro-p1-delay);
+}
+
+.intro.animate-content p:nth-of-type(2) {
+
+    transition-delay:
+        var(--intro-p2-delay);
+}
+
+
+/* =========================================================
+   ANIMACIÓN INDIVIDUAL — COUNTDOWN
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ESTADO INICIAL
+--------------------------------------------------------- */
+
+.countdown-section .countdown-title,
+.countdown-section .count-item {
+
+    opacity: 0;
+
+    transition:
+        opacity var(--count-anim-duration) var(--count-anim-ease),
+        transform var(--count-anim-duration) var(--count-anim-ease);
+
+    transition-delay: 0s;
+}
+
+
+/* ---------------------------------------------------------
+   POSICIONES INICIALES
+--------------------------------------------------------- */
+
+.countdown-section .countdown-title {
+
+    transform:
+        translate(
+            var(--count-title-from-x),
+            var(--count-title-from-y)
+        );
+}
+
+.countdown-section .count-item:nth-child(1) {
+
+    transform:
+        translate(
+            var(--count-days-from-x),
+            var(--count-days-from-y)
+        );
+}
+
+.countdown-section .count-item:nth-child(3) {
+
+    transform:
+        translate(
+            var(--count-hours-from-x),
+            var(--count-hours-from-y)
+        );
+}
+
+.countdown-section .count-item:nth-child(5) {
+
+    transform:
+        translate(
+            var(--count-minutes-from-x),
+            var(--count-minutes-from-y)
+        );
+}
+
+.countdown-section .count-item:nth-child(7) {
+
+    transform:
+        translate(
+            var(--count-seconds-from-x),
+            var(--count-seconds-from-y)
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ACTIVACIÓN DE LA ANIMACIÓN
+--------------------------------------------------------- */
+
+.countdown-section.animate-content .countdown-title,
+.countdown-section.animate-content .count-item {
+
+    opacity: 1;
+
+    transform:
+        translate(0, 0);
+}
+
+
+/* ---------------------------------------------------------
+   DELAYS INDIVIDUALES
+--------------------------------------------------------- */
+
+.countdown-section.animate-content .countdown-title {
+
+    transition-delay:
+        var(--count-title-delay);
+}
+
+.countdown-section.animate-content .count-item:nth-child(1) {
+
+    transition-delay:
+        var(--count-days-delay);
+}
+
+.countdown-section.animate-content .count-item:nth-child(3) {
+
+    transition-delay:
+        var(--count-hours-delay);
+}
+
+.countdown-section.animate-content .count-item:nth-child(5) {
+
+    transition-delay:
+        var(--count-minutes-delay);
+}
+
+.countdown-section.animate-content .count-item:nth-child(7) {
+
+    transition-delay:
+        var(--count-seconds-delay);
+}
+
+/* =========================================================
+   VISOR DE FOTOGRAFÍAS — GALERÍA
+========================================================= */
+
+.gallery-lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background:
+        rgba(0, 0, 0, .92);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+}
+
+
+/* =========================================================
+   VISOR ABIERTO
+========================================================= */
+
+.gallery-lightbox.is-open {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================================
+   CONTENEDOR DE LA FOTO
+========================================================= */
+
+.gallery-lightbox-content {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   FOTO COMPLETA
+========================================================= */
+
+.gallery-lightbox-image {
+
+    display: block;
+
+    width: auto;
+
+    height: auto;
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+    -webkit-touch-callout: none;
+
+    opacity: 0;
+
+    transform: scale(.96);
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+
+/* =========================================================
+   FOTO VISIBLE
+========================================================= */
+
+.gallery-lightbox.is-open
+.gallery-lightbox-image {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   BOTÓN CERRAR
+========================================================= */
+
+.gallery-lightbox-close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    z-index: 2;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid
+        rgba(255,255,255,.45);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.35);
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+.gallery-lightbox-close:hover {
+
+    background:
+        rgba(255,255,255,.15);
+
+    border-color:
+        rgba(255,255,255,.75);
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   BLOQUEAR SCROLL DEL DOCUMENTO
+========================================================= */
+
+body.gallery-lightbox-open {
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .gallery-lightbox {
+
+        padding: 15px;
+
+    }
+
+
+    .gallery-lightbox-close {
+
+        top: 15px;
+
+        right: 15px;
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 28px;
+
+    }
+
+}
+/* =====================================================
+   NAVEGACIÓN DEL VISOR — GALERÍA
+===================================================== */
+
+.gallery-lightbox-prev,
+.gallery-lightbox-next {
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 50%;
+
+    background: rgba(0,0,0,.35);
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    -webkit-tap-highlight-color: transparent;
+
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+
+/* ===== POSICIÓN ===== */
+
+.gallery-lightbox-prev {
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+.gallery-lightbox-next {
+    right: 25px;
+    transform: translateY(-50%);
+}
+
+
+/* ===== HOVER ===== */
+
+.gallery-lightbox-prev:hover,
+.gallery-lightbox-next:hover {
+    background: rgba(255,255,255,.15);
+    border-color: rgba(255,255,255,.75);
+}
+
+.gallery-lightbox-prev:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+.gallery-lightbox-next:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.gallery-lightbox-counter {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    z-index: 3;
+
+    transform: translateX(-50%);
+
+    padding: 7px 13px;
+
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 20px;
+
+    background: rgba(0,0,0,.35);
+    color: rgba(255,255,255,.9);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    line-height: 1;
+
+    pointer-events: none;
+
+    user-select: none;
+}
+
+
+/* =====================================================
+   ANIMACIÓN AL CAMBIAR FOTO
+===================================================== */
+
+.gallery-lightbox-image {
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+}
+
+.gallery-lightbox-image.gallery-image-changing {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .gallery-lightbox-prev,
+    .gallery-lightbox-next {
+        width: 42px;
+        height: 42px;
+
+        font-size: 32px;
+    }
+
+    .gallery-lightbox-prev {
+        left: 10px;
+    }
+
+    .gallery-lightbox-next {
+        right: 10px;
+    }
+
+    .gallery-lightbox-counter {
+        bottom: 18px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+
+        padding: 7px 11px;
+    }
+
+}
+/* =========================================================
+   FUENTES ESPECIALES DEL CONTADOR EN MÓVILES
+========================================================= */
+
+
+/* =========================================================
+   BINDINGS — CADA ELEMENTO USA EL CONTROL DE SU BLOQUE
+========================================================= */
+.intro .section-label {
+    margin: var(--intro-label-margin);
+    font-family: var(--intro-label-font);
+    font-size: var(--intro-label-size);
+    font-weight: var(--intro-label-weight);
+    letter-spacing: var(--intro-label-letter-spacing);
+    color: var(--intro-label-color);
+    translate: var(--intro-label-x) var(--intro-label-y);
+}
+.dress-section h2 {
+    margin: var(--dress-title-margin);
+    font-family: var(--dress-title-font);
+    font-size: var(--dress-title-size);
+    font-weight: var(--dress-title-weight);
+    letter-spacing: var(--dress-title-letter-spacing);
+    color: var(--dress-title-color);
+    translate: var(--dress-title-x) var(--dress-title-y);
+}
+.dress-section p {
+    margin: var(--dress-text-margin);
+    font-family: var(--dress-text-font);
+    font-size: var(--dress-text-size);
+    font-weight: var(--dress-text-weight);
+    line-height: var(--dress-text-line-height);
+    letter-spacing: var(--dress-text-letter-spacing);
+    color: var(--dress-text-color);
+    translate: var(--dress-text-x) var(--dress-text-y);
+}
+.envelopes-section h2 {
+    margin: var(--envelope-title-margin);
+    font-family: var(--envelope-title-font);
+    font-size: var(--envelope-title-size);
+    font-weight: var(--envelope-title-weight);
+    letter-spacing: var(--envelope-title-letter-spacing);
+    color: var(--envelope-title-color);
+    translate: var(--envelope-title-x) var(--envelope-title-y);
+}
+.envelopes-section p {
+    margin: var(--envelope-text-margin);
+    font-family: var(--envelope-text-font);
+    font-size: var(--envelope-text-size);
+    font-weight: var(--envelope-text-weight);
+    line-height: var(--envelope-text-line-height);
+    letter-spacing: var(--envelope-text-letter-spacing);
+    color: var(--envelope-text-color);
+    translate: var(--envelope-text-x) var(--envelope-text-y);
+}
+
+/* ===== INTRO: CONTROLES INDIVIDUALES ===== */
+.intro h2 { margin: var(--intro-title-margin); font-family: var(--intro-title-font); font-size: var(--intro-title-size); font-weight: var(--intro-title-weight); line-height: var(--intro-title-line-height); letter-spacing: var(--intro-title-letter-spacing); color: var(--intro-title-color); translate: var(--intro-title-x) var(--intro-title-y); }
+.intro p:nth-of-type(1) { margin: var(--intro-p1-margin); font-family: var(--intro-p1-font); font-size: var(--intro-p1-size); font-weight: var(--intro-p1-weight); line-height: var(--intro-p1-line-height); letter-spacing: var(--intro-p1-letter-spacing); color: var(--intro-p1-color); translate: var(--intro-p1-x) var(--intro-p1-y); }
+.intro p:nth-of-type(2) { margin: var(--intro-p2-margin); font-family: var(--intro-p2-font); font-size: var(--intro-p2-size); font-weight: var(--intro-p2-weight); line-height: var(--intro-p2-line-height); letter-spacing: var(--intro-p2-letter-spacing); color: var(--intro-p2-color); translate: var(--intro-p2-x) var(--intro-p2-y); }
+/* =========================================================
+   GALERÍA — POSICIÓN INDIVIDUAL DE CADA FOTO
+========================================================= */
+.gallery-item:nth-child(1) img { object-position: var(--gallery-img-1-x) var(--gallery-img-1-y); }
+.gallery-item:nth-child(2) img { object-position: var(--gallery-img-2-x) var(--gallery-img-2-y); }
+.gallery-item:nth-child(3) img { object-position: var(--gallery-img-3-x) var(--gallery-img-3-y); }
+.gallery-item:nth-child(4) img { object-position: var(--gallery-img-4-x) var(--gallery-img-4-y); }
+.gallery-item:nth-child(5) img { object-position: var(--gallery-img-5-x) var(--gallery-img-5-y); }
+.gallery-item:nth-child(6) img { object-position: var(--gallery-img-6-x) var(--gallery-img-6-y); }
+.gallery-item:nth-child(7) img { object-position: var(--gallery-img-7-x) var(--gallery-img-7-y); }
+.gallery-item:nth-child(8) img { object-position: var(--gallery-img-8-x) var(--gallery-img-8-y); }
+.gallery-item:nth-child(9) img { object-position: var(--gallery-img-9-x) var(--gallery-img-9-y); }
+.gallery-item:nth-child(10) img { object-position: var(--gallery-img-10-x) var(--gallery-img-10-y); }
+.gallery-item:nth-child(11) img { object-position: var(--gallery-img-11-x) var(--gallery-img-11-y); }
+.gallery-item:nth-child(12) img { object-position: var(--gallery-img-12-x) var(--gallery-img-12-y); }
+
+
+/* =========================================================
+   📍 POSICIÓN X/Y — BINDINGS ÚNICOS
+   ---------------------------------------------------------
+   Se usa la propiedad translate para NO pelearse con las
+   animaciones existentes del sitio.
+========================================================= */
+.opening-logo { translate: var(--opening-logo-x) var(--opening-logo-y); }
+.hero-photo { translate: var(--hero-photo-x) var(--hero-photo-y); }
+.hero h1 { translate: var(--hero-title-x) var(--hero-title-y); }
+.gold-line { translate: var(--hero-line-x) var(--hero-line-y); }
+.hero .eyebrow { translate: var(--hero-eyebrow-x) var(--hero-eyebrow-y); }
+.hero p { translate: var(--hero-text-x) var(--hero-text-y); }
+.hero-date { translate: var(--hero-date-x) var(--hero-date-y); }
+.countdown-title { translate: var(--count-title-x) var(--count-title-y); }
+.count-item span { translate: var(--count-number-x) var(--count-number-y); }
+.count-item small { translate: var(--count-label-x) var(--count-label-y); }
+.date-section h2 { translate: var(--date-number-x) var(--date-number-y); }
+.family-card { translate: var(--family-card-x) var(--family-card-y); }
+.family-card p { translate: var(--family-text-x) var(--family-text-y); }
+.sub-heading { translate: var(--family-subheading-x) var(--family-subheading-y); }
+.event-content h2 { translate: var(--event-title-x) var(--event-title-y); }
+.event-time { translate: var(--event-time-x) var(--event-time-y); }
+.gold-button { translate: var(--gold-button-x) var(--gold-button-y); }
+.dress-icon { translate: var(--dress-icon-x) var(--dress-icon-y); }
+.envelope-icon { translate: var(--envelope-icon-x) var(--envelope-icon-y); }
+.timeline-item { translate: var(--timeline-item-x) var(--timeline-item-y); }
+.pass-card { translate: var(--pass-card-x) var(--pass-card-y); }
+.whatsapp-button { translate: var(--whatsapp-x) var(--whatsapp-y); }
+.music-button { translate: var(--music-x) var(--music-y); }
+
+/* =========================================================
+   RESPONSIVE REAL — PROTECCIÓN CONTRA DESBORDAMIENTO
+   ---------------------------------------------------------
+   NO cambia el diseño. Solo evita que un elemento pueda
+   ser más ancho que el espacio disponible en el viewport.
+   Los valores editables siguen estando únicamente en :root.
+========================================================= */
+
+html,
+body,
+#invitation,
+.invitation,
+.section,
+.event-section,
+.pass-section,
+.footer {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+*,
+*::before,
+*::after {
+    min-width: 0;
+}
+
+/* Nunca permitimos que texto largo cree scroll horizontal. */
+.section,
+.section h2,
+.section p,
+.hero,
+.hero-content,
+.hero h1,
+.hero p,
+.hero-date,
+.intro,
+.intro h2,
+.intro p,
+.countdown-section,
+.countdown-content,
+.countdown,
+.count-item,
+.date-section,
+.date-details,
+.date-details div,
+.family-section,
+.family-card,
+.event-section,
+.event-content,
+.gallery-section,
+.gallery,
+.timeline-section,
+.timeline,
+.timeline-item,
+.pass-section,
+.pass-card,
+.rsvp-section,
+.footer {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Elementos flexibles pueden encogerse en pantallas pequeñas. */
+.count-item,
+.date-details div,
+.family-card,
+.event-content,
+.timeline-item,
+.pass-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Títulos y textos: el valor del Panel es el máximo maestro;
+   el viewport pone un límite de seguridad cuando es necesario. */
+.section h2 {
+    font-size: min(var(--section-title-size), 20vw);
+}
+
+.section p {
+    font-size: min(var(--section-text-size), 4vw);
+}
+
+.intro h2 {
+    font-size: min(var(--intro-title-size), 20vw);
+}
+
+.intro p:nth-of-type(1),
+.intro p:nth-of-type(2) {
+    font-size: min(var(--intro-p1-size), 4vw);
+}
+
+.countdown {
+    min-width: 0;
+}
+
+.count-item span {
+    font-size: min(var(--count-number-size), 15vw);
+}
+
+.count-item small {
+    font-size: min(var(--count-label-size), 3.5vw);
+}
+
+.date-section h2 {
+    font-size: min(var(--date-number-size), 32vw);
+}
+
+.date-month,
+.month {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.date-details {
+    flex-wrap: wrap;
+}
+
+.event-content h2 {
+    font-size: min(var(--event-title-size), 21vw);
+}
+
+.dress-section h2 {
+    font-size: min(var(--dress-title-size), 20vw);
+}
+
+.envelopes-section h2 {
+    font-size: min(var(--envelope-title-size), 20vw);
+}
+
+.timeline-item strong {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.pass-card h2,
+.pass-name,
+.pass-number {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.pass-card h2 {
+    font-size: min(var(--pass-title-size), 18vw);
+}
+
+.pass-name {
+    font-size: min(var(--pass-name-size), 12vw);
+}
+
+.pass-number {
+    font-size: min(var(--pass-number-size), 15vw);
+    line-height: 1;
+}
+
+.gold-button,
+.whatsapp-button {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Las fotos nunca pueden ampliar el ancho de su contenedor. */
+img,
+svg,
+video,
+canvas {
+    max-width: 100%;
+}
+
+.opening-logo,
+.hero-photo {
+    max-width: calc(100vw - 40px);
+}
+
+.gallery-item {
+    min-width: 0;
+}
+
+.gallery-item img {
+    max-width: 100%;
+}
+
+/* El botón flotante permanece accesible en pantallas muy estrechas. */
+.music-button {
+    right: max(10px, var(--music-right));
+    bottom: max(10px, var(--music-bottom));
+}
+
+/* Si el usuario amplía el texto del sistema, el contenido se adapta
+   en vez de producir una segunda columna invisible. */
+@supports (overflow-wrap: anywhere) {
+    body {
+        overflow-x: clip;
+    }
+}
+
+/* FIN — PANEL ÚNICO + PROTECCIÓN RESPONSIVE */
