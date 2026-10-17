@@ -1,11 +1,11 @@
 const invitation = {
     quinceanera: {
-        name: "Emma Vanessa",
+        name: "Yamileth",
         age: 15
     },
 
     event: {
-        date: "2027-02-06T19:00:00",
+        date: "2027-04-06T19:00:00",
         displayDate: "06 de febrero de 2027",
         ceremonyTime: "7:00 PM",
         receptionTime: "8:00 PM"
