@@ -5,26 +5,26 @@ const invitation = {
     },
 
     event: {
-        date: "2027-04-06T19:00:00",
-        displayDate: "06 de febrero de 2027",
-        ceremonyTime: "7:00 PM",
-        receptionTime: "8:00 PM"
+        date: "2027-04-03T16:00:00",
+        displayDate: "03 de abril de 2027",
+        ceremonyTime: "4:00 PM",
+        receptionTime: "6:00 PM"
     },
 
     family: {
-        father: "Emerzon Jonguitud Hernández",
-        mother: "Perla Yeyectzy Acosta Martínez",
-        godfather: "Juan Jesús Argüelles Robles",
-        godmother: "Citlali Acosta Martínez"
+        father: "Geronimo Santiago Morales",
+        mother: "Araceli Gabriel Macaria",
+        godfather: "Miguel Gabriel Santiago",
+        godmother: "Veronica Gabriel Macario"
     },
 
     ceremony: {
-        name: "Parroquia Santiago Apóstol",
-        maps: "https://goo.gl/maps/bRxn4gBVBFaoiZA67?coh=178571&entry=tt"
+        name: "Parroquia Santa María de Guadalupe",
+        maps: "https://maps.app.goo.gl/kAL5zijY3SbQQ1Nn6"
     },
 
     reception: {
-        name: "Salón Casa Nava",
+        name: "Auditorio primera sección",
         maps: "https://maps.app.goo.gl/1sqdkLtduQHUvZk4A"
     },
 
@@ -59,7 +59,7 @@ const invitation = {
     ===================================================== */
 
     option1: {
-        phone: "7891059345"
+        phone: "7898985075"
     },
 
     option2: {
@@ -72,7 +72,7 @@ const invitation = {
     ===================================================== */
 
     message:
-        "Hola, quiero confirmar mi asistencia a los XV años de Emmita."
+        "Hola, quiero confirmar mi asistencia a los XV años de Yamileth."
 
 },
 
