@@ -1304,7 +1304,7 @@ button {
             rgba(40, 15, 18, 0.18),
             rgba(40, 15, 18, 0.18)
         ),
-        url('../images/uva cuadro.jpg');
+        url('../images/muestra1.jpg');
 
     background-position: var(--opening-bg-x) var(--opening-bg-y);
 background-size: cover;
