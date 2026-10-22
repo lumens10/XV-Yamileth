@@ -77,7 +77,7 @@ const invitation = {
 },
 
     pass: {
-        guests: 2
+        guests: 1
     }
 };
 
