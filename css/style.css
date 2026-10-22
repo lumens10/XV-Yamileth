@@ -376,7 +376,7 @@
 --family-heading-weight: 300;
 --family-heading-line-height: 1.1;
 --family-heading-letter-spacing: 0px;
---family-heading-color: var(--c-cream);
+--family-heading-color: var(--c-gold);
 --family-heading-font: 'Parisienne', cursive;
 --family-heading-x: 0px;
 --family-heading-y: 0px;
@@ -388,7 +388,7 @@
 --family-subheading-weight: 300;
 --family-subheading-line-height: 1.1;
 --family-subheading-letter-spacing: 0px;
---family-subheading-color: var(--c-cream);
+--family-subheading-color: var(--c-gold);
 --family-subheading-font: 'Parisienne', cursive;
 --family-subheading-x: 0px;
 --family-subheading-y: 0px;
@@ -2622,8 +2622,8 @@ flex-shrink: 0;
 
     background:
         linear-gradient(
-            rgba(10, 8, 5, 0),
-            rgba(10, 8, 5, 0)
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6)
         ),
         url('../images/muestra1.jpg')
         var(--family-bg-x)
@@ -3045,8 +3045,8 @@ flex-shrink: 0;
 
     background:
         linear-gradient(
-            rgba(5, 4, 3, 0),
-            rgba(5, 4, 3, 0)
+            rgba(255, 255, 255, 0.6),
+            rgba(255, 255, 255, 0.6)
         ),
         url('../images/fondopar.jpg')
         center center /
