@@ -1679,7 +1679,7 @@ text-transform: uppercase;
             rgba(10, 8, 5, 20),
             rgba(10, 8, 5, 20)
         ),
-        url('../images/fondo2.jpg')
+        url('../images/foto2.jpg')
         var(--hero-bg-x)
         var(--hero-bg-y) /
         cover no-repeat;
