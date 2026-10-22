@@ -527,7 +527,7 @@
 --gallery-label-size: 10px;
 --gallery-label-weight: 400;
 --gallery-label-letter-spacing: 4px;
---gallery-label-color: #7f2855;
+--gallery-label-color: #977538;
 --gallery-label-font: 'Montserrat', sans-serif;
 --gallery-label-margin: 0 0 15px;
 --gallery-label-x: 0px;
@@ -536,7 +536,7 @@
 --gallery-title-size: 48px;
 --gallery-title-weight: 400;
 --gallery-title-line-height: 1;
---gallery-title-color: #7f2855;
+--gallery-title-color: #977538;
 --gallery-title-font: 'Cormorant Garamond', serif;
 --gallery-title-margin: 0;
 --gallery-title-x: 0px;
@@ -619,7 +619,7 @@
  
     /* ===== VESTIMENTA ===== */
 /* --- Etiqueta: CÓDIGO DE VESTIMENTA --- */
---dress-label-color: #7f2855;
+--dress-label-color: #977538;
 --dress-label-font: 'Montserrat', sans-serif;
 --dress-label-size: 10px;
 --dress-label-weight: 400;
@@ -630,11 +630,11 @@
 /* --- Icono: ♡ --- */
 --dress-icon-margin: 30px 0;
 --dress-icon-size: 70px;
---dress-icon-color: #7f2855;
+--dress-icon-color: #977538;
 --dress-icon-x: 0px;
 --dress-icon-y: 0px;
 /* --- Título: Formal --- */
---dress-title-color: #7f2855;
+--dress-title-color: #977538;
 --dress-title-font: 'Cormorant Garamond', serif;
 --dress-title-size: clamp(45px,10vw,80px);
 --dress-title-weight: 300;
@@ -682,7 +682,7 @@
  
    /* ===== SOBRES ===== */
 /* --- Etiqueta de sección --- */
---envelope-label-color: #7f2855;
+--envelope-label-color: #977538;
 --envelope-label-font: 'Montserrat', sans-serif;
 --envelope-label-size: 10px;
 --envelope-label-weight: 400;
@@ -697,7 +697,7 @@
 --envelope-icon-x: 0px;
 --envelope-icon-y: 0px;
 /* --- Título --- */
---envelope-title-color: #7f2855;
+--envelope-title-color: #977538;
 --envelope-title-font: 'Cormorant Garamond', serif;
 --envelope-title-size: clamp(45px,10vw,80px);
 --envelope-title-weight: 300;
@@ -706,7 +706,7 @@
 --envelope-title-x: 0px;
 --envelope-title-y: 0px;
 /* --- Texto --- */
---envelope-text-color: #7f2855;
+--envelope-text-color: #977538;
 --envelope-text-font: 'Montserrat', sans-serif;
 --envelope-text-size: 14px;
 --envelope-text-weight: 300;
@@ -746,7 +746,7 @@
 --timeline-section-label-size: 10px;
 --timeline-section-label-weight: 400;
 --timeline-section-label-letter-spacing: 3px;
---timeline-section-label-color: #7f2855;
+--timeline-section-label-color: #977538;
 --timeline-section-label-font: 'Montserrat', sans-serif;
 --timeline-section-label-margin: 0 0 15px;
 --timeline-section-label-x: 0px;
@@ -756,7 +756,7 @@
 --timeline-section-title-weight: 400;
 --timeline-section-title-letter-spacing: 0px;
 --timeline-section-title-line-height: 1;
---timeline-section-title-color: #7f2855;
+--timeline-section-title-color: #977538;
 --timeline-section-title-font: 'Cormorant Garamond', serif;
 --timeline-section-title-margin: 0;
 --timeline-section-title-x: 0px;
@@ -782,7 +782,7 @@
 --timeline-label-size: 10px;
 --timeline-label-weight: 400;
 --timeline-label-letter-spacing: 3px;
---timeline-label-color: #7f2855;
+--timeline-label-color: #977538;
 --timeline-label-font: 'Montserrat', sans-serif;
 --timeline-label-margin: 0;
 --timeline-label-x: 0px;
@@ -790,7 +790,7 @@
 /* --- Nombre del evento --- */
 --timeline-title-size: 30px;
 --timeline-title-weight: 400;
---timeline-title-color: #7f2855;
+--timeline-title-color: #977538;
 --timeline-title-font: 'Cormorant Garamond', serif;
 --timeline-title-letter-spacing: 0px;
 --timeline-title-line-height: 1;
