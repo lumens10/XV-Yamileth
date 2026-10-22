@@ -58,7 +58,7 @@
     --opening-title-size: clamp(22px,5vw,34px);
     --opening-title-weight: 500;
     --opening-title-letter-spacing: 5px;
-    --opening-title-color: #f6ebd9;
+    --opening-title-color: #977538;
     --opening-title-font: 'Cormorant Garamond', serif;
     --opening-button-margin-top: 0px;
     --opening-button-padding: 17px 34px;
@@ -106,7 +106,7 @@
 /* --- MIS XV --- */
 --hero-eyebrow-size: 40px;
 --hero-eyebrow-letter-spacing: 3px;
---hero-eyebrow-color: var(--c-cream);
+--hero-eyebrow-color: #977538;
 --hero-eyebrow-x: 0px;
 --hero-eyebrow-y: clamp(-200px,-20svh,-80px);
 /* --- Frase --- */
@@ -116,7 +116,7 @@
 --hero-text-weight: 300;
 --hero-text-line-height: 1.3;
 --hero-text-letter-spacing: 0px;
---hero-text-color: var(--c-cream);
+--hero-text-color: #977538;
 --hero-text-font: 'Cormorant Garamond', serif;
 --hero-text-x: 0px;
 --hero-text-y: clamp(90px,18.75svh,150px);
@@ -124,7 +124,7 @@
 --hero-date-margin-top: 35px;
 --hero-date-size: 11px;
 --hero-date-letter-spacing: 7px;
---hero-date-color: var(--c-gold-light);
+--hero-date-color: #977538;
 --hero-date-x: 0px;
 --hero-date-y: clamp(95px,20svh,160px);
 
@@ -140,7 +140,7 @@
     --intro-title-size: clamp(45px,10vw,80px);
     --intro-title-weight: 300;
     --intro-title-font: 'Cormorant Garamond', serif;
-    --intro-title-color: #7f2855;
+    --intro-title-color: #977538;
     --intro-title-letter-spacing: 0px;
     --intro-title-line-height: .95;
     --intro-title-margin: 20px auto 30px;
@@ -151,7 +151,7 @@
     --intro-p1-weight: 300;
     --intro-p1-line-height: 1.9;
     --intro-p1-letter-spacing: 0px;
-    --intro-p1-color: #7f2855;
+    --intro-p1-color: #977538;
     --intro-p1-font: 'Montserrat', sans-serif;
     --intro-p1-x: 0px;
     --intro-p1-y: 0px;
@@ -160,12 +160,12 @@
     --intro-p2-weight: 300;
     --intro-p2-line-height: 1.9;
     --intro-p2-letter-spacing: 0px;
-    --intro-p2-color: #7f2855;
+    --intro-p2-color: #977538;
     --intro-p2-font: 'Montserrat', sans-serif;
     --intro-p2-x: 0px;
     --intro-p2-y: 0px;
     --intro-label-size: 10px;
-    --intro-label-color: #7f2855;
+    --intro-label-color: #977538;
     --intro-label-font: 'Montserrat', sans-serif;
     --intro-label-weight: 400;
     --intro-label-letter-spacing: 4px;
@@ -256,14 +256,14 @@
 --date-bg: none;
 /* ===== ETIQUETA ===== */
 /* RESERVA LA FECHA */
---date-label-color: #7f2855;
+--date-label-color: #977538;
 /* ===== NÚMERO ===== */
 /* 19 */
 --date-title-margin-top: 25px;
 --date-number-size: clamp(120px, 30vw, 220px);
 --date-number-weight: 300;
 --date-number-line-height: .7;
---date-number-color: #7f2855;
+--date-number-color: #977538;
 --date-number-font: 'Cormorant Garamond', serif;
 --date-number-x: 0px;
 --date-number-y: 0px;
@@ -272,13 +272,13 @@
 --date-month-margin-top: 25px;
 --date-month-size: 15px;
 --date-month-letter-spacing: 7px;
---date-month-color: #7f2855;
+--date-month-color: #977538;
 --date-month-font: 'Montserrat', sans-serif;
 /* ===== AÑO ===== */
 /* 2026 */
 --date-year-margin-top: 10px;
 --date-year-size: 32px;
---date-year-color: #7f2855;
+--date-year-color: #977538;
 --date-year-font: 'Cormorant Garamond', serif;
 /* ===== DETALLES ===== */
 --date-details-max-width: 500px;
@@ -452,7 +452,7 @@
 --event-title-weight: 300;
 --event-title-line-height: .9;
 --event-title-letter-spacing: 0px;
---event-title-color: var(--c-cream);
+--event-title-color: #977538;
 --event-title-font: 'Cormorant Garamond', serif;
 --event-title-x: 0px;
 --event-title-y: 0px;
@@ -463,7 +463,7 @@
 --event-time-size: 30px;
 --event-time-weight: 300;
 --event-time-letter-spacing: 0px;
---event-time-color: var(--c-gold-light);
+--event-time-color: #977538;
 --event-time-font: 'Cormorant Garamond', serif;
 --event-time-x: 0px;
 --event-time-y: 0px;
@@ -474,8 +474,8 @@
 --gold-button-size: 9px;
 --gold-button-weight: 500;
 --gold-button-letter-spacing: 3px;
---gold-button-color: var(--c-gold);
---gold-button-border-color: var(--c-gold);
+--gold-button-color: #977538;
+--gold-button-border-color: #977538;
 --gold-button-bg: transparent;
 --gold-button-x: 0px;
 --gold-button-y: 0px;
