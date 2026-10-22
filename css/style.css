@@ -1676,7 +1676,7 @@ text-transform: uppercase;
 
     background:
         linear-gradient(
-            rgba(10, 8, 5, .10),
+            rgba(165, 144, 22, 0.1),
             rgba(10, 8, 5, .10)
         ),
         url('../images/foto2.jpg')
