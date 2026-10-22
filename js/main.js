@@ -562,6 +562,25 @@ if (
         "none";
 
 }
+
+const passesParam =
+    urlParams.get("pases");
+
+const passSection =
+    document.querySelector(
+        ".pass-section"
+    );
+
+if (
+    passSection &&
+    passesParam !== "1"
+) {
+
+    passSection.style.display =
+        "none";
+
+}
+
 const paseParam =
     Number(
         urlParams.get("pase")
