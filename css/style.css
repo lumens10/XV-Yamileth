@@ -2625,7 +2625,7 @@ flex-shrink: 0;
             rgba(10, 8, 5, 0),
             rgba(10, 8, 5, 0)
         ),
-        url('../images/fondo liso.jpg')
+        url('../images/muestra1.jpg')
         var(--family-bg-x)
         var(--family-bg-y) /
         cover no-repeat;
