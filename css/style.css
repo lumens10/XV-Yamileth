@@ -447,6 +447,7 @@
 /* =========================================================
    TÍTULO DEL EVENTO
 ========================================================= */
+--event-label-color: var(--section-label-color);
 --event-title-margin: 25px 0;
 --event-title-size: clamp(50px, 11vw, 100px);
 --event-title-weight: 300;
@@ -6880,6 +6881,8 @@ body.gallery-lightbox-open {
 .family-card p { translate: var(--family-text-x) var(--family-text-y); }
 .sub-heading { translate: var(--family-subheading-x) var(--family-subheading-y); }
 .event-content h2 { translate: var(--event-title-x) var(--event-title-y); }
+.event-section .section-label { color: var(--event-label-color); }
+.event-content h2 { color: var(--event-title-color); }
 .event-time { translate: var(--event-time-x) var(--event-time-y); }
 .gold-button { translate: var(--gold-button-x) var(--gold-button-y); }
 .dress-icon { translate: var(--dress-icon-x) var(--dress-icon-y); }
