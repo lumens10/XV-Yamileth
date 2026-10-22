@@ -2309,7 +2309,7 @@ flex-shrink: 0;
     padding: var(--section-padding);
 
     background:
-        url("../images/Fondo 6.jpg")
+        url("../images/fondo liso.jpg")
         center center /
         cover
         no-repeat;
@@ -3047,7 +3047,7 @@ flex-shrink: 0;
             rgba(5, 4, 3, 0),
             rgba(5, 4, 3, 0)
         ),
-        url('../images/Fondo 1.jpg')
+        url('../images/fondopar.jpg')
         center center /
         cover no-repeat;
 }
@@ -3064,7 +3064,7 @@ flex-shrink: 0;
             rgba(5, 4, 3, 0),
             rgba(5, 4, 3, 0)
         ),
-        url('../images/Fondo 1.jpg')
+        url('../images/fondosal.jpg')
         center center /
         cover no-repeat;
 }
