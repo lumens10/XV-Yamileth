@@ -2146,8 +2146,8 @@ font-size: var(--section-text-size);
 
     background:
         linear-gradient(
-            rgba(9, 8, 7, 0),
-            rgba(9, 8, 7, 0)
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
         ),
         url("../images/fondo liso.jpg")
         center center / cover no-repeat;
@@ -2310,6 +2310,10 @@ flex-shrink: 0;
     padding: var(--section-padding);
 
     background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
+        ),
         url("../images/fondo liso.jpg")
         center center /
         cover
