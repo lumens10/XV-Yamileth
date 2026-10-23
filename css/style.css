@@ -643,7 +643,7 @@
 --dress-title-x: 0px;
 --dress-title-y: 0px;
 /* --- ornamen png --- */
---dress-ornament-width: 120px;
+--dress-ornament-width: 220px;
 --dress-ornament-margin: 0 auto;
 --dress-ornament-x: 0px;
 --dress-ornament-y: 0px;
@@ -1132,7 +1132,7 @@
 --footer-signature-size: 26px;
 --footer-signature-weight: 400;
 --footer-signature-letter-spacing: 0px;
---footer-signature-color: rgba(247,242,233,.5);
+--footer-signature-color: #977538;
 --footer-signature-font: 'Cormorant Garamond', serif;
 /* Posición */
 --footer-signature-x: 0px;
