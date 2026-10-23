@@ -896,7 +896,7 @@
 --whatsapp-size: 10px;
 --whatsapp-weight: 500;
 --whatsapp-letter-spacing: 2px;
---whatsapp-color: #fff;
+--whatsapp-color: #977538;
 --whatsapp-bg: #878c76;
 --whatsapp-x: 0px;
 --whatsapp-y: 0px;
@@ -934,11 +934,11 @@
 --rsvp-input-size: 16px;
 --rsvp-option-size: 16px;
 /* COLORES */
---rsvp-label-color: #f7f2e9;
+--rsvp-label-color: #977538;
 --rsvp-input-bg: rgba(255, 255, 255, .95);
 --rsvp-input-color: #2b241c;
 --rsvp-placeholder-color: rgba(80, 70, 60, .45);
---rsvp-option-color: #f7f2e9;
+--rsvp-option-color: #977538;
 --rsvp-input-border-color: rgba(201, 164, 92, .45);
 --rsvp-input-focus-color: #c9a45c;
 /* CAMPOS */
