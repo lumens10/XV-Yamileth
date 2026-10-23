@@ -3173,6 +3173,8 @@ flex-shrink: 0;
 
     letter-spacing: var(--gold-button-letter-spacing);
 
+    color: var(--gold-button-color);
+
     text-transform: uppercase;
 
     transition:
