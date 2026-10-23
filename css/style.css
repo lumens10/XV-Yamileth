@@ -5128,10 +5128,10 @@ text-transform: uppercase;
 
     background:
         linear-gradient(
-            rgba(9, 8, 7, 0),
-            rgba(9, 8, 7, 0)
+            rgba(255, 255, 255, 0.7),
+            rgba(255, 255, 255, 0.7)
         ),
-        url('../images/Fondo 1.jpg')
+        url('../images/muestra1.jpg')
         center center / cover no-repeat;
  
     padding-bottom: var(--rsvp-bottom-padding);
