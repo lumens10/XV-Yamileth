@@ -99,6 +99,8 @@
 --hero-title-color: var(--c-cream);
 --hero-text-stroke-width: 1px;
 --hero-text-stroke-color: #ffffff;
+--hero-copy-outline-width: .5px;
+--hero-copy-outline-color: #ffffff;
 --hero-title-font: 'Parisienne', cursive;
 --hero-title-image-width: 620px;
 --hero-title-image-max-width: 85vw;
@@ -1849,10 +1851,6 @@ text-transform: uppercase;
     letter-spacing:
         var(--hero-eyebrow-letter-spacing);
 
-    -webkit-text-stroke:
-        var(--hero-text-stroke-width)
-        var(--hero-text-stroke-color);
-
     color:
         var(--hero-eyebrow-color);
 
@@ -1908,10 +1906,6 @@ text-transform: uppercase;
 
     letter-spacing:
         var(--hero-title-letter-spacing);
-
-    -webkit-text-stroke:
-        var(--hero-text-stroke-width)
-        var(--hero-text-stroke-color);
 
     color:
         var(--hero-title-color);
@@ -2030,10 +2024,6 @@ text-transform: uppercase;
     letter-spacing:
         var(--hero-text-letter-spacing);
 
-    -webkit-text-stroke:
-        var(--hero-text-stroke-width)
-        var(--hero-text-stroke-color);
-
     color:
         var(--hero-text-color);
 
@@ -2063,16 +2053,28 @@ text-transform: uppercase;
     letter-spacing:
         var(--hero-date-letter-spacing);
 
-    -webkit-text-stroke:
-        var(--hero-text-stroke-width)
-        var(--hero-text-stroke-color);
-
     color:
         var(--hero-date-color);
 
     translate:
         var(--hero-date-x)
         var(--hero-date-y);
+}
+
+/* El contorno del texto se forma hacia fuera para conservar el relleno. */
+.hero .eyebrow,
+.hero h1,
+.hero p,
+.hero-date {
+    text-shadow:
+        var(--hero-copy-outline-width) 0 0 var(--hero-copy-outline-color),
+        calc(0px - var(--hero-copy-outline-width)) 0 0 var(--hero-copy-outline-color),
+        0 var(--hero-copy-outline-width) 0 var(--hero-copy-outline-color),
+        0 calc(0px - var(--hero-copy-outline-width)) 0 var(--hero-copy-outline-color),
+        var(--hero-copy-outline-width) var(--hero-copy-outline-width) 0 var(--hero-copy-outline-color),
+        calc(0px - var(--hero-copy-outline-width)) var(--hero-copy-outline-width) 0 var(--hero-copy-outline-color),
+        var(--hero-copy-outline-width) calc(0px - var(--hero-copy-outline-width)) 0 var(--hero-copy-outline-color),
+        calc(0px - var(--hero-copy-outline-width)) calc(0px - var(--hero-copy-outline-width)) 0 var(--hero-copy-outline-color);
 }
 
 
