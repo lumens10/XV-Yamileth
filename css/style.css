@@ -97,7 +97,7 @@
 --hero-title-line-height: .75;
 --hero-title-letter-spacing: 0px;
 --hero-title-color: var(--c-cream);
---hero-text-stroke-width: 5px;
+--hero-text-stroke-width: 1px;
 --hero-text-stroke-color: #ffffff;
 --hero-title-font: 'Parisienne', cursive;
 --hero-title-image-width: 620px;
