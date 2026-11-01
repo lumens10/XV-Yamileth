@@ -25,7 +25,7 @@ const invitation = {
 
     reception: {
         name: "Auditorio primera sección",
-        maps: "https://maps.app.goo.gl/1sqdkLtduQHUvZk4A"
+        maps: "https://maps.app.goo.gl/K72MZxmF9Dzq3mMc8"
     },
 
     dressCode: "Formal de noche",
