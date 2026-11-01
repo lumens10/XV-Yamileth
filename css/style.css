@@ -1089,6 +1089,8 @@
 ========================================================= */
 /* Tamaño */
 --footer-ornament-width: 150px;
+--footer-ornament-stroke-width: 1px;
+--footer-ornament-stroke-color: #ffffff;
 /* Posición */
 --footer-ornament-x: 0px;
 --footer-ornament-y: 330px;
@@ -1138,6 +1140,8 @@
 --footer-signature-letter-spacing: 0px;
 --footer-signature-color: #977538;
 --footer-signature-font: 'Cormorant Garamond', serif;
+--footer-copy-outline-width: .5px;
+--footer-copy-outline-color: #ffffff;
 /* Posición */
 --footer-signature-x: 0px;
 --footer-signature-y: 0px;
@@ -5905,6 +5909,12 @@ cursor: pointer;
         var(--footer-ornament-x)
         var(--footer-ornament-y);
 
+    filter:
+        drop-shadow(var(--footer-ornament-stroke-width) 0 var(--footer-ornament-stroke-color))
+        drop-shadow(calc(0px - var(--footer-ornament-stroke-width)) 0 var(--footer-ornament-stroke-color))
+        drop-shadow(0 var(--footer-ornament-stroke-width) var(--footer-ornament-stroke-color))
+        drop-shadow(0 calc(0px - var(--footer-ornament-stroke-width)) var(--footer-ornament-stroke-color));
+
 }
 
 
@@ -6010,6 +6020,21 @@ cursor: pointer;
         var(--footer-signature-x)
         var(--footer-signature-y);
 
+}
+
+/* El contorno exterior conserva el color de relleno del texto del footer. */
+.footer h2,
+.footer p,
+.footer span {
+    text-shadow:
+        var(--footer-copy-outline-width) 0 0 var(--footer-copy-outline-color),
+        calc(0px - var(--footer-copy-outline-width)) 0 0 var(--footer-copy-outline-color),
+        0 var(--footer-copy-outline-width) 0 var(--footer-copy-outline-color),
+        0 calc(0px - var(--footer-copy-outline-width)) 0 var(--footer-copy-outline-color),
+        var(--footer-copy-outline-width) var(--footer-copy-outline-width) 0 var(--footer-copy-outline-color),
+        calc(0px - var(--footer-copy-outline-width)) var(--footer-copy-outline-width) 0 var(--footer-copy-outline-color),
+        var(--footer-copy-outline-width) calc(0px - var(--footer-copy-outline-width)) 0 var(--footer-copy-outline-color),
+        calc(0px - var(--footer-copy-outline-width)) calc(0px - var(--footer-copy-outline-width)) 0 var(--footer-copy-outline-color);
 }
 
 
