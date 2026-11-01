@@ -52,7 +52,7 @@
     --opening-logo-max-width: 85%;
     --opening-logo-max-height: 45svh;
     --opening-logo-margin: 0 auto 5px;
-    --opening-logo-x: 0px;
+    --opening-logo-x: 10px;
     --opening-logo-y: -20px;
     --opening-title-margin: -20px 0 28px;
     --opening-title-size: clamp(22px,5vw,34px);
