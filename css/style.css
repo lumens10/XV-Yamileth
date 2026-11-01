@@ -58,7 +58,7 @@
     --opening-title-size: clamp(22px,5vw,34px);
     --opening-title-weight: 500;
     --opening-title-letter-spacing: 5px;
-    --opening-title-color: #977538;
+    --opening-title-color: #977436;
     --opening-title-font: 'Cormorant Garamond', serif;
     --opening-button-margin-top: 0px;
     --opening-button-padding: 17px 34px;
@@ -110,7 +110,7 @@
 /* --- MIS XV --- */
 --hero-eyebrow-size: 40px;
 --hero-eyebrow-letter-spacing: 3px;
---hero-eyebrow-color: #977538;
+--hero-eyebrow-color: #977436;
 --hero-eyebrow-x: 0px;
 --hero-eyebrow-y: clamp(-200px,-20svh,-80px);
 /* --- Frase --- */
@@ -120,7 +120,7 @@
 --hero-text-weight: 300;
 --hero-text-line-height: 1.3;
 --hero-text-letter-spacing: 0px;
---hero-text-color: #977538;
+--hero-text-color: #977436;
 --hero-text-font: 'Cormorant Garamond', serif;
 --hero-text-x: 0px;
 --hero-text-y: clamp(90px,18.75svh,150px);
@@ -128,7 +128,7 @@
 --hero-date-margin-top: 35px;
 --hero-date-size: 11px;
 --hero-date-letter-spacing: 7px;
---hero-date-color: #977538;
+--hero-date-color: #977436;
 --hero-date-x: 0px;
 --hero-date-y: clamp(95px,20svh,160px);
 
@@ -144,7 +144,7 @@
     --intro-title-size: clamp(45px,10vw,80px);
     --intro-title-weight: 300;
     --intro-title-font: 'Cormorant Garamond', serif;
-    --intro-title-color: #977538;
+    --intro-title-color: #977436;
     --intro-title-letter-spacing: 0px;
     --intro-title-line-height: .95;
     --intro-title-margin: 20px auto 30px;
@@ -155,7 +155,7 @@
     --intro-p1-weight: 300;
     --intro-p1-line-height: 1.9;
     --intro-p1-letter-spacing: 0px;
-    --intro-p1-color: #977538;
+    --intro-p1-color: #977436;
     --intro-p1-font: 'Montserrat', sans-serif;
     --intro-p1-x: 0px;
     --intro-p1-y: 0px;
@@ -164,12 +164,12 @@
     --intro-p2-weight: 300;
     --intro-p2-line-height: 1.9;
     --intro-p2-letter-spacing: 0px;
-    --intro-p2-color: #977538;
+    --intro-p2-color: #977436;
     --intro-p2-font: 'Montserrat', sans-serif;
     --intro-p2-x: 0px;
     --intro-p2-y: 0px;
     --intro-label-size: 10px;
-    --intro-label-color: #977538;
+    --intro-label-color: #977436;
     --intro-label-font: 'Montserrat', sans-serif;
     --intro-label-weight: 400;
     --intro-label-letter-spacing: 4px;
@@ -260,14 +260,14 @@
 --date-bg: none;
 /* ===== ETIQUETA ===== */
 /* RESERVA LA FECHA */
---date-label-color: #977538;
+--date-label-color: #977436;
 /* ===== NÚMERO ===== */
 /* 19 */
 --date-title-margin-top: 25px;
 --date-number-size: clamp(120px, 30vw, 220px);
 --date-number-weight: 300;
 --date-number-line-height: .7;
---date-number-color: #977538;
+--date-number-color: #977436;
 --date-number-font: 'Cormorant Garamond', serif;
 --date-number-x: 0px;
 --date-number-y: 0px;
@@ -276,13 +276,13 @@
 --date-month-margin-top: 25px;
 --date-month-size: 15px;
 --date-month-letter-spacing: 7px;
---date-month-color: #977538;
+--date-month-color: #977436;
 --date-month-font: 'Montserrat', sans-serif;
 /* ===== AÑO ===== */
 /* 2026 */
 --date-year-margin-top: 10px;
 --date-year-size: 32px;
---date-year-color: #977538;
+--date-year-color: #977436;
 --date-year-font: 'Cormorant Garamond', serif;
 /* ===== DETALLES ===== */
 --date-details-max-width: 500px;
@@ -457,7 +457,7 @@
 --event-title-weight: 300;
 --event-title-line-height: .9;
 --event-title-letter-spacing: 0px;
---event-title-color: #977538;
+--event-title-color: #977436;
 --event-title-font: 'Cormorant Garamond', serif;
 --event-title-x: 0px;
 --event-title-y: 0px;
@@ -468,7 +468,7 @@
 --event-time-size: 30px;
 --event-time-weight: 300;
 --event-time-letter-spacing: 0px;
---event-time-color: #977538;
+--event-time-color: #977436;
 --event-time-font: 'Cormorant Garamond', serif;
 --event-time-x: 0px;
 --event-time-y: 0px;
@@ -479,9 +479,9 @@
 --gold-button-size: 9px;
 --gold-button-weight: 500;
 --gold-button-letter-spacing: 3px;
---gold-button-color: #977538;
---gold-button-border-color: #977538;
---gold-button-bg: #977538;
+--gold-button-color: #977436;
+--gold-button-border-color: #977436;
+--gold-button-bg: #977436;
 --gold-button-x: 0px;
 --gold-button-y: 0px;
 /* =========================================================
@@ -531,7 +531,7 @@
 --gallery-label-size: 10px;
 --gallery-label-weight: 400;
 --gallery-label-letter-spacing: 4px;
---gallery-label-color: #977538;
+--gallery-label-color: #977436;
 --gallery-label-font: 'Montserrat', sans-serif;
 --gallery-label-margin: 0 0 15px;
 --gallery-label-x: 0px;
@@ -540,7 +540,7 @@
 --gallery-title-size: 48px;
 --gallery-title-weight: 400;
 --gallery-title-line-height: 1;
---gallery-title-color: #977538;
+--gallery-title-color: #977436;
 --gallery-title-font: 'Cormorant Garamond', serif;
 --gallery-title-margin: 0;
 --gallery-title-x: 0px;
@@ -623,7 +623,7 @@
  
     /* ===== VESTIMENTA ===== */
 /* --- Etiqueta: CÓDIGO DE VESTIMENTA --- */
---dress-label-color: #977538;
+--dress-label-color: #977436;
 --dress-label-font: 'Montserrat', sans-serif;
 --dress-label-size: 10px;
 --dress-label-weight: 400;
@@ -634,11 +634,11 @@
 /* --- Icono: ♡ --- */
 --dress-icon-margin: 30px 0;
 --dress-icon-size: 70px;
---dress-icon-color: #977538;
+--dress-icon-color: #977436;
 --dress-icon-x: 0px;
 --dress-icon-y: 0px;
 /* --- Título: Formal --- */
---dress-title-color: #977538;
+--dress-title-color: #977436;
 --dress-title-font: 'Cormorant Garamond', serif;
 --dress-title-size: clamp(45px,10vw,80px);
 --dress-title-weight: 300;
@@ -686,7 +686,7 @@
  
    /* ===== SOBRES ===== */
 /* --- Etiqueta de sección --- */
---envelope-label-color: #977538;
+--envelope-label-color: #977436;
 --envelope-label-font: 'Montserrat', sans-serif;
 --envelope-label-size: 10px;
 --envelope-label-weight: 400;
@@ -701,7 +701,7 @@
 --envelope-icon-x: 0px;
 --envelope-icon-y: 0px;
 /* --- Título --- */
---envelope-title-color: #977538;
+--envelope-title-color: #977436;
 --envelope-title-font: 'Cormorant Garamond', serif;
 --envelope-title-size: clamp(45px,10vw,80px);
 --envelope-title-weight: 300;
@@ -710,7 +710,7 @@
 --envelope-title-x: 0px;
 --envelope-title-y: 0px;
 /* --- Texto --- */
---envelope-text-color: #977538;
+--envelope-text-color: #977436;
 --envelope-text-font: 'Montserrat', sans-serif;
 --envelope-text-size: 14px;
 --envelope-text-weight: 300;
@@ -750,7 +750,7 @@
 --timeline-section-label-size: 10px;
 --timeline-section-label-weight: 400;
 --timeline-section-label-letter-spacing: 3px;
---timeline-section-label-color: #977538;
+--timeline-section-label-color: #977436;
 --timeline-section-label-font: 'Montserrat', sans-serif;
 --timeline-section-label-margin: 0 0 15px;
 --timeline-section-label-x: 0px;
@@ -760,7 +760,7 @@
 --timeline-section-title-weight: 400;
 --timeline-section-title-letter-spacing: 0px;
 --timeline-section-title-line-height: 1;
---timeline-section-title-color: #977538;
+--timeline-section-title-color: #977436;
 --timeline-section-title-font: 'Cormorant Garamond', serif;
 --timeline-section-title-margin: 0;
 --timeline-section-title-x: 0px;
@@ -786,7 +786,7 @@
 --timeline-label-size: 10px;
 --timeline-label-weight: 400;
 --timeline-label-letter-spacing: 3px;
---timeline-label-color: #977538;
+--timeline-label-color: #977436;
 --timeline-label-font: 'Montserrat', sans-serif;
 --timeline-label-margin: 0;
 --timeline-label-x: 0px;
@@ -794,7 +794,7 @@
 /* --- Nombre del evento --- */
 --timeline-title-size: 30px;
 --timeline-title-weight: 400;
---timeline-title-color: #977538;
+--timeline-title-color: #977436;
 --timeline-title-font: 'Cormorant Garamond', serif;
 --timeline-title-letter-spacing: 0px;
 --timeline-title-line-height: 1;
@@ -894,9 +894,9 @@
  
  /* ===== RSVP ===== */
 --rsvp-bottom-padding: 130px;
---rsvp-section-label-color: #977538;
---rsvp-title-color: #977538;
---rsvp-text-color: #977538;
+--rsvp-section-label-color: #977436;
+--rsvp-title-color: #977436;
+--rsvp-text-color: #977436;
 /* BOTÓN WHATSAPP */
 --whatsapp-margin-top: 25px;
 --whatsapp-padding: 17px 30px;
@@ -941,11 +941,11 @@
 --rsvp-input-size: 16px;
 --rsvp-option-size: 16px;
 /* COLORES */
---rsvp-label-color: #977538;
+--rsvp-label-color: #977436;
 --rsvp-input-bg: rgba(255, 255, 255, .95);
 --rsvp-input-color: #2b241c;
 --rsvp-placeholder-color: rgba(80, 70, 60, .45);
---rsvp-option-color: #977538;
+--rsvp-option-color: #977436;
 --rsvp-input-border-color: rgba(201, 164, 92, .45);
 --rsvp-input-focus-color: #c9a45c;
 /* CAMPOS */
@@ -1138,7 +1138,7 @@
 --footer-signature-size: 26px;
 --footer-signature-weight: 400;
 --footer-signature-letter-spacing: 0px;
---footer-signature-color: #977538;
+--footer-signature-color: #977436;
 --footer-signature-font: 'Cormorant Garamond', serif;
 --footer-copy-outline-width: .5px;
 --footer-copy-outline-color: #ffffff;
